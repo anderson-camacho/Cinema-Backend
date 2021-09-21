@@ -1,7 +1,7 @@
 pipeline {
 
   agent {
-    label 'GestorCinema'
+    label 'Slave_Induccion'
   }
 
   options {
