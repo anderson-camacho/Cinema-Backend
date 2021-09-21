@@ -12,7 +12,7 @@ pipeline {
 
   //Una sección que define las herramientas “preinstaladas” en Jenkins
   tools {
-    jdk 'JDK11_Centos' //Verisión preinstalada en la Configuración del Master
+    jdk 'JDK8_Centos' //Verisión preinstalada en la Configuración del Master
     gradle 'Gradle6.0.1_Centos'
   }
 /* Versiones disponibles
@@ -33,7 +33,7 @@ pipeline {
         echo "------------>Checkout<------------"
         checkout([
             $class: 'GitSCM',
-            branches: [[name: '*/main']],
+            branches: [[name: '*/master']],
             doGenerateSubmoduleConfigurations: false,
             extensions: [],
             gitTool: 'Default',
