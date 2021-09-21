@@ -39,7 +39,7 @@ pipeline {
             gitTool: 'Default',
             submoduleCfg: [],
             userRemoteConfigs: [[
-            credentialsId: 'GitHub_anderson.camacho',
+            credentialsId: 'Github_anderson.camacho',
             url:'https://github.com/anderson-camacho/Cinema.git'
             ]]
         ])
