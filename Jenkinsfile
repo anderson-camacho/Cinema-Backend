@@ -2,6 +2,7 @@ pipeline {
 
   agent {
     label 'Slave_Induccion'
+    gradle 'gradle-7.0.2_Centos'
   }
 
   options {
