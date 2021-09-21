@@ -10,8 +10,7 @@ pipeline {
   }
 
   tools {
-    jdk '1.8.0_301'
-    gradle 'gradle-7.0.2'
+    jdk 'JDK8_centos'
   }
 
   stages{
