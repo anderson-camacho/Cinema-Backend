@@ -10,7 +10,7 @@ pipeline {
   }
 
   tools {
-    jdk 'JDK8_centos'
+    jdk 'JDK8_Centos'
   }
 
   stages{
