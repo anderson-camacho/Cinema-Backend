@@ -1,5 +1,10 @@
 package com.ceiba.pelicula.modelo.entidad;
 
+/**
+ * @author anderson.camacho
+ *
+ */
+
 import lombok.Getter;
 
 import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
@@ -14,6 +19,12 @@ public class Pelicula {
     private String titulo;
     private String Director;
 
+    /**
+     * Constructor general con validaciones de datos obligatorios
+     * @param id
+     * @param titulo
+     * @param director
+     */
     public Pelicula(Long id, String titulo, String director) {
 
         validarObligatorio(titulo, SE_DEBE_INGRESAR_EL_TITULO_DE_LA_PELICULA);
