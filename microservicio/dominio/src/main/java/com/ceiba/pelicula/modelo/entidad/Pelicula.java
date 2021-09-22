@@ -17,7 +17,7 @@ public class Pelicula {
 
     private Long id;
     private String titulo;
-    private String Director;
+    private String director;
 
     /**
      * Constructor general con validaciones de datos obligatorios
@@ -31,6 +31,6 @@ public class Pelicula {
         validarObligatorio(director, SE_DEBE_INGRESAR_EL_NOMBRE_DEL_DIRECTOR);
         this.id = id;
         this.titulo = titulo;
-        Director = director;
+        this.director = director;
     }
 }
