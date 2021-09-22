@@ -1,4 +1,4 @@
-package com.ceiba.pelicula.servicio.testdatabuilder.testdatabuilder;
+package com.ceiba.pelicula.servicio.testdatabuilder;
 
 import com.ceiba.pelicula.modelo.entidad.Pelicula;
 
