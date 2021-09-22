@@ -13,6 +13,9 @@ import org.junit.Test;
 import org.mockito.Mockito;
 
 public class ServicioActualizarPeliculaTest {
+
+    private static final String LA_PELICULA_YA_EXISTE_EN_EL_SISTEMA = "La pelicula ya existe en el sistema";
+
     @Test
     public void validarPeliculaExistenciaPreviaTest() {
         // arrange
@@ -21,6 +24,6 @@ public class ServicioActualizarPeliculaTest {
         Mockito.when(repositorioPelicula.existeExcluyendoId(Mockito.anyLong(),Mockito.anyString())).thenReturn(true);
         ServicioActualizarPelicula servicioActualizarPelicula = new ServicioActualizarPelicula(repositorioPelicula);
         // act - assert
-        BasePrueba.assertThrows(() -> servicioActualizarPelicula.ejecutar(pelicula), ExcepcionDuplicidad.class,"El usuario ya existe en el sistema");
+        BasePrueba.assertThrows(() -> servicioActualizarPelicula.ejecutar(pelicula), ExcepcionDuplicidad.class, LA_PELICULA_YA_EXISTE_EN_EL_SISTEMA);
     }
 }

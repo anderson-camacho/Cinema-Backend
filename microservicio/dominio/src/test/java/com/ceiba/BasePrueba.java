@@ -33,6 +33,7 @@ public class BasePrueba {
         }
     }
 
+
     @FunctionalInterface
     public interface Thunk {
         void execute();

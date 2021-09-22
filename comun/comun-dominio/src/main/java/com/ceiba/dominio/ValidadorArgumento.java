@@ -1,5 +1,6 @@
 package com.ceiba.dominio;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
@@ -7,6 +8,7 @@ import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.ceiba.dominio.excepcion.ExcepcionFechaInvalida;
 import com.ceiba.dominio.excepcion.ExcepcionLongitudValor;
 import com.ceiba.dominio.excepcion.ExcepcionValorInvalido;
 import com.ceiba.dominio.excepcion.ExcepcionValorObligatorio;
@@ -14,6 +16,12 @@ import com.ceiba.dominio.excepcion.ExcepcionValorObligatorio;
 public class ValidadorArgumento {
 	
 	private ValidadorArgumento() {}
+
+    public static void validarFecha(LocalDate valor, String mensaje){
+        if(valor.isBefore(LocalDate.now())){
+            throw new ExcepcionFechaInvalida(mensaje);
+        }
+    }
 
     public static void validarObligatorio(Object valor, String mensaje) {
         if (valor == null) {

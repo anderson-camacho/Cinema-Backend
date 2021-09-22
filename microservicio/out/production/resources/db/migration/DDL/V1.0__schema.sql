@@ -12,11 +12,3 @@ create table pelicula (
  director varchar(255) not null,
  primary key (id)
 );
-
-create table pelicula (
- id int(11) not null auto_increment,
- idPelicula int(11) not null,
- fecha DATE not null,
- cupos int not null;
- primary key (id)
-);

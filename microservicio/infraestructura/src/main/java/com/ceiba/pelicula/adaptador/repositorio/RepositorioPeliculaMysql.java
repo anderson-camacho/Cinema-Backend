@@ -59,6 +59,14 @@ public class RepositorioPeliculaMysql implements RepositorioPelicula {
     }
 
     @Override
+    public boolean existe(Long id) {
+        MapSqlParameterSource parameterSource = new MapSqlParameterSource();
+        parameterSource.addValue("id", id);
+
+        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExiste, parameterSource, Boolean.class);
+    }
+
+    @Override
     public boolean existeExcluyendoId(Long id, String titulo) {
         MapSqlParameterSource parameterSource = new MapSqlParameterSource();
         parameterSource.addValue("id", id);

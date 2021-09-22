@@ -1,0 +1,1 @@
+insert into horario (idPelicula, fecha, cupos) values (:idPelicula, :fecha, :cupos)
