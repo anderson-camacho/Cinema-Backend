@@ -1,4 +1,4 @@
-package com.ceiba.pelicula.servicio.testdatabuilder;
+package com.ceiba.pelicula.testdatabuilder;
 
 import com.ceiba.pelicula.modelo.entidad.Pelicula;
 
@@ -12,24 +12,24 @@ public class PeliculaTestDataBuilder {
         director = "Volado_De_La_Cabeza";
     }
 
-    public PeliculaTestDataBuilder conId(Long id){
+    public PeliculaTestDataBuilder conId(Long id) {
         this.id = id;
         return this;
     }
 
-    public PeliculaTestDataBuilder sinTitulo( ){
+    public PeliculaTestDataBuilder sinTitulo() {
         this.titulo = null;
         return this;
     }
 
 
-    public PeliculaTestDataBuilder sinDirector( ){
+    public PeliculaTestDataBuilder sinDirector() {
         this.director = null;
         return this;
     }
 
 
-    public Pelicula build(){
+    public Pelicula build() {
         return new Pelicula(this.id, this.titulo, this.director);
     }
 }

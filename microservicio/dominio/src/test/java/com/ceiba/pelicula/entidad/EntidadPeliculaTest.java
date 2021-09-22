@@ -5,7 +5,7 @@ import com.ceiba.dominio.ValidadorArgumento;
 import com.ceiba.dominio.excepcion.ExcepcionSinDatos;
 import com.ceiba.dominio.excepcion.ExcepcionValorObligatorio;
 import com.ceiba.pelicula.modelo.entidad.Pelicula;
-import com.ceiba.pelicula.servicio.testdatabuilder.PeliculaTestDataBuilder;
+import com.ceiba.pelicula.testdatabuilder.PeliculaTestDataBuilder;
 import org.junit.Test;
 
 public class EntidadPeliculaTest {

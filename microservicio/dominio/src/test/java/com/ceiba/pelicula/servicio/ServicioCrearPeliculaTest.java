@@ -4,7 +4,7 @@ import com.ceiba.BasePrueba;
 import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
 import com.ceiba.pelicula.modelo.entidad.Pelicula;
 import com.ceiba.pelicula.puerto.repositorio.RepositorioPelicula;
-import com.ceiba.pelicula.servicio.testdatabuilder.PeliculaTestDataBuilder;
+import com.ceiba.pelicula.testdatabuilder.PeliculaTestDataBuilder;
 import org.junit.Test;
 import org.mockito.Mockito;
 
