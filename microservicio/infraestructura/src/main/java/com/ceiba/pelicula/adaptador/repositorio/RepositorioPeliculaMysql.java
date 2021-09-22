@@ -5,24 +5,26 @@ import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
 import com.ceiba.pelicula.modelo.entidad.Pelicula;
 import com.ceiba.pelicula.puerto.repositorio.RepositorioPelicula;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class RepositorioPeliculaMysql implements RepositorioPelicula {
 
     private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
 
-    @SqlStatement(namespace = "sql/pelicula", value = "crear")
+    @SqlStatement(namespace = "pelicula", value = "crear")
     private static String sqlCrear;
 
-    @SqlStatement(namespace = "sql/pelicula", value = "actualizar")
+    @SqlStatement(namespace = "pelicula", value = "actualizar")
     private static String sqlActualizar;
 
-    @SqlStatement(namespace = "sql/pelicula", value = "eliminar")
+    @SqlStatement(namespace = "pelicula", value = "eliminar")
     private static String sqlEliminar;
 
-    @SqlStatement(namespace = "sql/pelicula", value = "existe")
+    @SqlStatement(namespace = "pelicula", value = "existe")
     private static String sqlExiste;
 
-    @SqlStatement(namespace = "sql/pelicula", value = "existeExcluyendoId")
+    @SqlStatement(namespace = "pelicula", value = "existeExcluyendoId")
     private static String sqlExisteExcluyendoId;
 
 

@@ -16,7 +16,6 @@ import io.swagger.annotations.ApiOperation;
 @RequestMapping("/usuarios")
 @Api(tags={"Controlador consulta usuario"})
 public class ConsultaControladorUsuario {
-
     private final ManejadorListarUsuarios manejadorListarUsuarios;
 
     public ConsultaControladorUsuario(ManejadorListarUsuarios manejadorListarUsuarios) {

@@ -1,7 +1,7 @@
 package com.ceiba.pelicula.puerto.repositorio;
 
 import com.ceiba.pelicula.modelo.entidad.Pelicula;
-import com.ceiba.usuario.modelo.entidad.Usuario;
+
 
 public interface RepositorioPelicula {
     /**

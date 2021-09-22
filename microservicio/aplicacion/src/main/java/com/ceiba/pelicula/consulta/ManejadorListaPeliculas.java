@@ -2,7 +2,6 @@ package com.ceiba.pelicula.consulta;
 
 import com.ceiba.pelicula.modelo.dto.DtoPelicula;
 import com.ceiba.pelicula.puerto.dao.DaoPelicula;
-import com.ceiba.usuario.consulta.ManejadorListarUsuarios;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

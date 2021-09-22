@@ -8,8 +8,10 @@ import com.ceiba.usuario.puerto.repositorio.RepositorioUsuario;
 import com.ceiba.usuario.servicio.ServicioActualizarUsuario;
 import com.ceiba.usuario.servicio.ServicioCrearUsuario;
 import com.ceiba.usuario.servicio.ServicioEliminarUsuario;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Service;
 
 @Configuration
 public class BeanServicio {
