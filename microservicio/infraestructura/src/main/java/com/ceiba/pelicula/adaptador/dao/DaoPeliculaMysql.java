@@ -13,7 +13,7 @@ public class DaoPeliculaMysql implements DaoPelicula {
 
     private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
 
-    @SqlStatement(namespace = "usuario", value = "listar")
+    @SqlStatement(namespace = "pelicula", value = "listar")
     private static String sqlListar;
 
     public DaoPeliculaMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate){

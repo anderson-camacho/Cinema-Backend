@@ -1,2 +1,2 @@
-select id,titulo,director,
+select id,titulo,director
 from pelicula

@@ -10,6 +10,5 @@ create table pelicula (
  id int(11) not null auto_increment,
  titulo varchar(255) not null,
  director varchar(255) not null,
- fecha_creacion datetime null,
  primary key (id)
 );

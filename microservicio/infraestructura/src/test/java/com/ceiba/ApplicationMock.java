@@ -25,7 +25,6 @@ public class ApplicationMock {
 
         return Flyway.configure().locations("filesystem:../src/main/resources","filesystem:src/test/resources").baselineOnMigrate(true)
                 .dataSource(dataSource).load();
-
     }
 
     @Bean
