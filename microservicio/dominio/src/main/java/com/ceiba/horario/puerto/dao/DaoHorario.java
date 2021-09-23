@@ -4,6 +4,6 @@ import com.ceiba.horario.modelo.dto.DtoHorario;
 
 import java.util.List;
 
-public interface DaoPelicula {
+public interface DaoHorario {
     List<DtoHorario> listar();
 }

@@ -26,10 +26,10 @@ public interface RepositorioHorario {
 
     /**
      * Permite validar si existe un horario
-     * @param pelicula
+     * @param id
      * @return si existe o no
      */
-    boolean existe(Pelicula pelicula);
+    boolean existe(Long id);
 
     /**
      * Permite validar si existe un usuario con un nombre excluyendo un id

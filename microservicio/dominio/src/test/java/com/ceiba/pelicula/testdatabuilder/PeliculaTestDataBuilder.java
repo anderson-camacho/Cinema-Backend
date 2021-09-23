@@ -2,14 +2,16 @@ package com.ceiba.pelicula.testdatabuilder;
 
 import com.ceiba.pelicula.modelo.entidad.Pelicula;
 
+import java.util.UUID;
+
 public class PeliculaTestDataBuilder {
     private Long id;
     private String titulo;
     private String director;
 
     public PeliculaTestDataBuilder() {
-        this.titulo = "Rapidos_y_Furiosos";
-        director = "Volado_De_La_Cabeza";
+        this.titulo = UUID.randomUUID().toString();
+        director = UUID.randomUUID().toString();
     }
 
     public PeliculaTestDataBuilder conId(Long id) {

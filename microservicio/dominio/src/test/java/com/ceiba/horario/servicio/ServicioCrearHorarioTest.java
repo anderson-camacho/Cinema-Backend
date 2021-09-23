@@ -2,22 +2,30 @@ package com.ceiba.horario.servicio;
 
 import com.ceiba.BasePrueba;
 import com.ceiba.dominio.excepcion.ExcepcionValorInvalido;
+import com.ceiba.dominio.excepcion.ExcepcionValorObligatorio;
 import com.ceiba.horario.modelo.entidad.Horario;
 import com.ceiba.horario.puerto.repositorio.RepositorioHorario;
-import com.ceiba.horario.servicio.testdatabuilder.HorarioTestDataBuilder;
-import com.ceiba.pelicula.modelo.entidad.Pelicula;
+import com.ceiba.horario.testdatabuilder.HorarioTestDataBuilder;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import java.time.LocalDate;
+import java.util.Random;
+import java.util.UUID;
 
 public class ServicioCrearHorarioTest {
 
-    @Test
-    public void validarCupoNegativoTest() {
-        HorarioTestDataBuilder horarioTestDataBuilder = new HorarioTestDataBuilder().conCupo(-1L);
-        BasePrueba.assertThrows(
-                () -> horarioTestDataBuilder.build(),
-                ExcepcionValorInvalido.class, "El usuario ya existe en el sistema");
-    }
+    /*@Test
+    public void validarHorarioCrearHorario() {
+        // Arrange
+        Horario horario = new HorarioTestDataBuilder().build();
+        RepositorioHorario repositorioHorario = Mockito.mock(RepositorioHorario.class);
+        Mockito.when(repositorioHorario.existe(Mockito.anyLong())).thenReturn(true);
+        ServicioCrearHorario servicioCrearHorario = new ServicioCrearHorario(repositorioHorario);
+
+
+
+        // Act - Assert
+        BasePrueba.assertThrows(() -> servicioCrearHorario.ejecutar(horario), ExcepcionValorObligatorio.class, "");
+    }*/
+
 }
