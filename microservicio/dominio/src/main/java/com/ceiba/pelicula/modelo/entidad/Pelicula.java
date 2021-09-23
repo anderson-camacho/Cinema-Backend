@@ -1,10 +1,5 @@
 package com.ceiba.pelicula.modelo.entidad;
 
-/**
- * @author anderson.camacho
- *
- */
-
 import lombok.Getter;
 
 import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
@@ -21,6 +16,7 @@ public class Pelicula {
 
     /**
      * Constructor general con validaciones de datos obligatorios
+     *
      * @param id
      * @param titulo
      * @param director

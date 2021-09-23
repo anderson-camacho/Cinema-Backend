@@ -3,7 +3,6 @@ package com.ceiba.horario.modelo.entidad;
 import lombok.Getter;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 import static com.ceiba.dominio.ValidadorArgumento.*;
 

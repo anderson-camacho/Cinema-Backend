@@ -1,10 +1,7 @@
 package com.ceiba.horario.modelo.dto;
 
-import com.ceiba.pelicula.modelo.entidad.Pelicula;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-
-import java.time.LocalDate;
 
 @Getter
 @AllArgsConstructor

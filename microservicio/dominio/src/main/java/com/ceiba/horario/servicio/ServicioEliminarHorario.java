@@ -2,7 +2,6 @@ package com.ceiba.horario.servicio;
 
 import com.ceiba.dominio.excepcion.ExcepcionExiste;
 import com.ceiba.horario.puerto.repositorio.RepositorioHorario;
-import com.ceiba.pelicula.puerto.repositorio.RepositorioPelicula;
 
 public class ServicioEliminarHorario {
 

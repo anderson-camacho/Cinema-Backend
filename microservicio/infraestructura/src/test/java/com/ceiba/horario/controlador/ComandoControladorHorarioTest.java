@@ -1,10 +1,8 @@
 package com.ceiba.horario.controlador;
 
 import com.ceiba.ApplicationMock;
-import com.ceiba.Pelicula.servicio.ComandoPeliculaTestDataBuilder;
 import com.ceiba.horario.comando.ComandoHorario;
 import com.ceiba.horario.servicio.testdatabuilder.ComandoHorarioTestDataBuilder;
-import com.ceiba.pelicula.comando.ComandoPelicula;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -38,7 +36,6 @@ public class ComandoControladorHorarioTest {
                 .content(objectMapper.writeValueAsString(comandoHorario)))
                 .andExpect(status().isOk())
                 .andExpect(content().json("{'valor':4}"));
-
     }
 
     @Test

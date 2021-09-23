@@ -1,7 +1,6 @@
 package com.ceiba.horario.testdatabuilder;
 
 import com.ceiba.horario.modelo.entidad.Horario;
-import com.ceiba.pelicula.testdatabuilder.PeliculaTestDataBuilder;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
