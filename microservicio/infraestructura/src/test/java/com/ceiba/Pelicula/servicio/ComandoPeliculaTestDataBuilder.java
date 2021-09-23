@@ -14,7 +14,7 @@ public class ComandoPeliculaTestDataBuilder {
 //        titulo = UUID.randomUUID().toString();
 //        director = UUID.randomUUID().toString();
         this.titulo = "blancanieves";
-        this.director = "tomas";
+        this.director = "Anderson";
     }
 
     public ComandoPeliculaTestDataBuilder conTitulo(String titulo){

@@ -37,7 +37,7 @@ public class ComandoControladorPeliculaTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(pelicula)))
                 .andExpect(status().isOk())
-                .andExpect(content().json("{'valor': 2}"));
+                .andExpect(content().json("{'valor': 5}"));
 
     }
 

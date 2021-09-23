@@ -30,7 +30,7 @@ public class ConsultaControladorPeliculaTest {
         mockMvc.perform(get("/peliculas")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$", hasSize(1)))
-                .andExpect(jsonPath("$[0].titulo", is("test")));
+                .andExpect(jsonPath("$", hasSize(4)))
+                .andExpect(jsonPath("$[0].titulo", is("Maria")));
     }
 }
