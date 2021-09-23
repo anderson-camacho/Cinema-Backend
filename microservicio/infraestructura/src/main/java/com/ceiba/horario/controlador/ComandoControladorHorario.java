@@ -28,7 +28,7 @@ public class ComandoControladorHorario {
         return manejadorCrearHorario.ejecutar(comandoHorario);
     }
 
-    @DeleteMapping
+    @DeleteMapping(value="/{id}")
     @ApiOperation("Eliminar Horario")
     public void eliminar(@PathVariable Long id) {
         manejadorEliminarHorario.ejecutar(id);

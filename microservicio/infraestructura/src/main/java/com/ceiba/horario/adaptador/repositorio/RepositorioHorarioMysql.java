@@ -16,9 +16,6 @@ public class RepositorioHorarioMysql implements RepositorioHorario {
     @SqlStatement(namespace = "horario", value = "crear")
     private static String sqlCrear;
 
-    @SqlStatement(namespace = "horario", value = "actualizar")
-    private static String sqlActualizar;
-
     @SqlStatement(namespace = "horario", value = "eliminar")
     private static String sqlEliminar;
 
@@ -42,6 +39,7 @@ public class RepositorioHorarioMysql implements RepositorioHorario {
     public void eliminar(Long id) {
         MapSqlParameterSource parameterSource = new MapSqlParameterSource();
         parameterSource.addValue("id", id);
+        this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().update(sqlEliminar, parameterSource);
     }
 
     @Override
@@ -51,12 +49,4 @@ public class RepositorioHorarioMysql implements RepositorioHorario {
         return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExiste, parameterSource, Boolean.class);
     }
 
-    @Override
-    public boolean existeExcluyendoId(Long id, String nombrePelicula) {
-        MapSqlParameterSource paramSource = new MapSqlParameterSource();
-        paramSource.addValue("id", id);
-        paramSource.addValue("nombre", nombrePelicula);
-
-        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExisteExcluyendoId, paramSource, Boolean.class);
-    }
 }

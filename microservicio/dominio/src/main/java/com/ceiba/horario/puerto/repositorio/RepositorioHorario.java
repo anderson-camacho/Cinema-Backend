@@ -1,7 +1,6 @@
 package com.ceiba.horario.puerto.repositorio;
 
 import com.ceiba.horario.modelo.entidad.Horario;
-import com.ceiba.pelicula.modelo.entidad.Pelicula;
 
 public interface RepositorioHorario {
 
@@ -11,7 +10,6 @@ public interface RepositorioHorario {
      * @return el id generado
      */
     Long crear(Horario horario);
-
 
     /**
      * Permite eliminar una horario
@@ -26,10 +24,5 @@ public interface RepositorioHorario {
      */
     boolean existe(Long id);
 
-    /**
-     * Permite validar si existe un usuario con un nombre excluyendo un id
-     * @param id
-     * @return si existe o no
-     */
-    boolean existeExcluyendoId(Long id,String nombrePelicula);
+
 }

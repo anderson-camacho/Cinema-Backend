@@ -1,8 +1,10 @@
 package com.ceiba.horario.controlador;
 
 import com.ceiba.ApplicationMock;
+import com.ceiba.Pelicula.servicio.ComandoPeliculaTestDataBuilder;
 import com.ceiba.horario.comando.ComandoHorario;
 import com.ceiba.horario.servicio.testdatabuilder.ComandoHorarioTestDataBuilder;
+import com.ceiba.pelicula.comando.ComandoPelicula;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,7 +15,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -37,6 +39,15 @@ public class ComandoControladorHorarioTest {
                 .andExpect(status().isOk())
                 .andExpect(content().json("{'valor':4}"));
 
+    }
+
+    @Test
+    public void eliminar() throws Exception{
+        Long id = 1L;
+        mockMvc.perform(delete("/horarios/{id}",id)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
     }
 
 }
