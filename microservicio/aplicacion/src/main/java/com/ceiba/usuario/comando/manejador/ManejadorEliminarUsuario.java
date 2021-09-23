@@ -15,6 +15,7 @@ public class ManejadorEliminarUsuario implements ManejadorComando<Long> {
     }
 
     public void ejecutar(Long idUsuario) {
+
         this.servicioEliminarUsuario.ejecutar(idUsuario);
     }
 }

@@ -14,13 +14,13 @@ public class ServicioEliminarPelicula {
     }
 
     public void ejecutar(Long id) {
-        validarNoExistenciaPrevia(id);
+//        validarNoExistenciaPrevia(id);
         this.repositorioPelicula.eliminar(id);
     }
 
     private void validarNoExistenciaPrevia(Long id) {
         boolean existe = this.repositorioPelicula.existe(id);
-        if (!existe) {
+        if (existe) {
             throw new ExcepcionExiste(LA_PELICULA_NO_EXISTE);
         }
     }

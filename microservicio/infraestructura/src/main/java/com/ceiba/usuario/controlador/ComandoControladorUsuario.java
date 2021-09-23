@@ -38,6 +38,7 @@ public class ComandoControladorUsuario {
     @DeleteMapping(value = "/{id}")
     @ApiOperation("Eliminar Usuario")
     public void eliminar(@PathVariable Long id) {
+
         manejadorEliminarUsuario.ejecutar(id);
     }
 

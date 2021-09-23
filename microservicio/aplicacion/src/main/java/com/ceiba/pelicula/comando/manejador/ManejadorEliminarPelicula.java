@@ -1,11 +1,12 @@
 package com.ceiba.pelicula.comando.manejador;
 
+import com.ceiba.manejador.ManejadorComando;
 import com.ceiba.pelicula.servicio.ServicioEliminarPelicula;
 import com.ceiba.usuario.servicio.ServicioEliminarUsuario;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ManejadorEliminarPelicula {
+public class ManejadorEliminarPelicula implements ManejadorComando<Long> {
     private final ServicioEliminarPelicula servicioEliminarPelicula;
 
     public ManejadorEliminarPelicula(ServicioEliminarPelicula servicioEliminarPelicula) {

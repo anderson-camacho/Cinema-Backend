@@ -31,6 +31,6 @@ public class ConsultaControladorPeliculaTest {
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", hasSize(1)))
-                .andExpect(jsonPath("$[0].titulo", is("Cenicienta")));
+                .andExpect(jsonPath("$[0].titulo", is("test")));
     }
 }

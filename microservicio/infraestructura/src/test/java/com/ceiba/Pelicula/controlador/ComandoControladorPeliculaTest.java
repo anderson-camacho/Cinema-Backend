@@ -4,8 +4,6 @@ import com.ceiba.ApplicationMock;
 import com.ceiba.Pelicula.servicio.ComandoPeliculaTestDataBuilder;
 import com.ceiba.pelicula.comando.ComandoPelicula;
 import com.ceiba.pelicula.controlador.ComandoControladorPelicula;
-import com.ceiba.usuario.comando.ComandoUsuario;
-import com.ceiba.usuario.servicio.testdatabuilder.ComandoUsuarioTestDataBuilder;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -59,7 +57,7 @@ public class ComandoControladorPeliculaTest {
 
     @Test
     public void eliminar() throws Exception{
-        Long id = 2L;
+        Long id = 1L;
         mockMvc.perform(delete("/peliculas/{id}",id)
                         .contentType(MediaType.APPLICATION_JSON)
                         .accept(MediaType.APPLICATION_JSON))
