@@ -18,5 +18,6 @@ create table horario (
  idPelicula int(11) not null,
  fecha DATE not null,
  cupos int(50) not null,
- primary key (id)
+ primary key (id),
+ foreign key (idPelicula) references pelicula (id)
 );
