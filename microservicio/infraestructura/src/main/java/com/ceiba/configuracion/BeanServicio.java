@@ -7,6 +7,9 @@ import com.ceiba.pelicula.puerto.repositorio.RepositorioPelicula;
 import com.ceiba.pelicula.servicio.ServicioActualizarPelicula;
 import com.ceiba.pelicula.servicio.ServicioCrearPelicula;
 import com.ceiba.pelicula.servicio.ServicioEliminarPelicula;
+import com.ceiba.reserva.puerto.repositorio.RepositorioReserva;
+import com.ceiba.reserva.servicio.ServicioCrearReserva;
+import com.ceiba.reserva.servicio.ServicioEliminarReserva;
 import com.ceiba.usuario.puerto.repositorio.RepositorioUsuario;
 import com.ceiba.usuario.servicio.ServicioActualizarUsuario;
 import com.ceiba.usuario.servicio.ServicioCrearUsuario;
@@ -16,6 +19,20 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class BeanServicio {
+
+    /**
+     * Beans del Horario
+     */
+
+    @Bean
+    public ServicioCrearReserva servicioCrearReserva(RepositorioReserva repositorioReserva) {
+        return new ServicioCrearReserva(repositorioReserva);
+    }
+
+    @Bean
+    ServicioEliminarReserva servicioEliminarReserva(RepositorioReserva repositorioReserva) {
+        return new ServicioEliminarReserva(repositorioReserva);
+    }
 
     /**
      * Beans del Horario

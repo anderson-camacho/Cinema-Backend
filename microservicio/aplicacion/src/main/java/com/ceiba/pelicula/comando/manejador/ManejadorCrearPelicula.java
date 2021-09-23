@@ -1,7 +1,6 @@
 package com.ceiba.pelicula.comando.manejador;
 
 import com.ceiba.ComandoRespuesta;
-import com.ceiba.manejador.ManejadorComando;
 import com.ceiba.manejador.ManejadorComandoRespuesta;
 import com.ceiba.pelicula.comando.ComandoPelicula;
 import com.ceiba.pelicula.comando.fabrica.FabricaPelicula;

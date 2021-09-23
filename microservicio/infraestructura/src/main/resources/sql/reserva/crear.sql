@@ -1,0 +1,1 @@
+insert into reserva (idUsuario, idHorario) values (:idUsuario, :idHorario)

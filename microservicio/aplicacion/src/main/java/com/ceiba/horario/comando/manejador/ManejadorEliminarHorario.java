@@ -1,11 +1,11 @@
 package com.ceiba.horario.comando.manejador;
 
 import com.ceiba.horario.servicio.ServicioEliminarHorario;
-import com.ceiba.pelicula.servicio.ServicioEliminarPelicula;
+import com.ceiba.manejador.ManejadorComando;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ManejadorEliminarHorario {
+public class ManejadorEliminarHorario implements ManejadorComando<Long> {
     private final ServicioEliminarHorario servicioEliminarHorario;
 
     public ManejadorEliminarHorario(ServicioEliminarHorario servicioEliminarHorario) {
@@ -13,6 +13,7 @@ public class ManejadorEliminarHorario {
     }
 
     public void ejecutar(Long id) {
+
         this.servicioEliminarHorario.ejecutar(id);
     }
 }

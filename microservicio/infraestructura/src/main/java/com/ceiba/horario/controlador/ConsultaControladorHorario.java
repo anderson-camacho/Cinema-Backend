@@ -1,6 +1,5 @@
 package com.ceiba.horario.controlador;
 
-
 import com.ceiba.horario.consulta.ManejadorListaHorarios;
 import com.ceiba.horario.modelo.dto.DtoHorario;
 import io.swagger.annotations.Api;

@@ -11,12 +11,6 @@ public interface RepositorioReserva {
      */
     Long crear(Reserva reserva);
 
-    /**
-     * Permite actualizar una pelicula
-     *
-     * @param reserva
-     */
-    void actualizar(Reserva reserva);
 
     /**
      * Permite eliminar una pelicula
