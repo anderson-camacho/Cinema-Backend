@@ -4,7 +4,6 @@ package com.ceiba.horario.servicio;
 import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
 import com.ceiba.horario.modelo.entidad.Horario;
 import com.ceiba.horario.puerto.repositorio.RepositorioHorario;
-import com.ceiba.pelicula.modelo.entidad.Pelicula;
 
 public class ServicioCrearHorario {
 
@@ -13,6 +12,7 @@ public class ServicioCrearHorario {
     private final RepositorioHorario repositorioHorario;
 
     public ServicioCrearHorario(RepositorioHorario repositorioHorario) {
+
         this.repositorioHorario = repositorioHorario;
     }
 

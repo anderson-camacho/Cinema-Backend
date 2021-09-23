@@ -12,11 +12,6 @@ public interface RepositorioHorario {
      */
     Long crear(Horario horario);
 
-    /**
-     * Permite actualizar una horario
-     * @param horario
-     */
-    void actualizar(Horario horario);
 
     /**
      * Permite eliminar una horario

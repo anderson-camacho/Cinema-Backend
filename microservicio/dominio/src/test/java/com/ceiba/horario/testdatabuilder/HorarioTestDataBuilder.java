@@ -4,6 +4,7 @@ import com.ceiba.horario.modelo.entidad.Horario;
 import com.ceiba.pelicula.testdatabuilder.PeliculaTestDataBuilder;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class HorarioTestDataBuilder {
     private Long id;
@@ -55,5 +56,16 @@ public class HorarioTestDataBuilder {
 
     public Horario build(){
         return new Horario(this.id, this.idPelicula, this.fecha, this.cupos);
+    }
+
+    private LocalDate formatearFechaStringToLocalDate(String date) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/LL/yyyy");
+        LocalDate localDate = LocalDate.parse(date);
+        return localDate;
+    }
+
+    private String formatearFechaLocalDateAString(LocalDate date) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/LL/yyyy");
+        return formatter.format(date);
     }
 }

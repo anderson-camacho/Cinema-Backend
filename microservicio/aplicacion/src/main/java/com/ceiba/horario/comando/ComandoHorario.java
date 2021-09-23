@@ -1,18 +1,19 @@
-package com.ceiba.horario.modelo.dto;
+package com.ceiba.horario.comando;
 
-import com.ceiba.pelicula.modelo.entidad.Pelicula;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDate;
 
 @Getter
+@Setter
 @AllArgsConstructor
-public class DtoHorario {
-
+@NoArgsConstructor
+public class ComandoHorario {
     private Long id;
     private Long idPelicula;
-    private String fecha;
+    private LocalDate fecha;
     private Long cupos;
-
 }

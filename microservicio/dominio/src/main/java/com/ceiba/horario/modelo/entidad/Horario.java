@@ -1,9 +1,9 @@
 package com.ceiba.horario.modelo.entidad;
 
-import com.ceiba.pelicula.modelo.entidad.Pelicula;
 import lombok.Getter;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 import static com.ceiba.dominio.ValidadorArgumento.*;
 
@@ -33,5 +33,16 @@ public class Horario {
         this.idPelicula = idPelicula;
         this.id = id;
 
+    }
+
+    private LocalDate formatearFechaStringToLocalDate(String date) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/LL/yyyy");
+        LocalDate localDate = LocalDate.parse(date);
+        return localDate;
+    }
+
+    private String formatearFechaLocalDateAString(LocalDate date) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/LL/yyyy");
+        return formatter.format(date);
     }
 }

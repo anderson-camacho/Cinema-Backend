@@ -12,7 +12,7 @@ public class ManejadorEliminarPelicula {
         this.servicioEliminarPelicula = servicioEliminarPelicula;
     }
 
-    public void ejecutar(Long idUsuario) {
-        this.servicioEliminarPelicula.ejecutar(idUsuario);
+    public void ejecutar(Long id) {
+        this.servicioEliminarPelicula.ejecutar(id);
     }
 }
