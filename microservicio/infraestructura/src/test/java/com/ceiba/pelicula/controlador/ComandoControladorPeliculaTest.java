@@ -1,9 +1,8 @@
-package com.ceiba.Pelicula.controlador;
+package com.ceiba.pelicula.controlador;
 
 import com.ceiba.ApplicationMock;
-import com.ceiba.Pelicula.servicio.ComandoPeliculaTestDataBuilder;
+import com.ceiba.pelicula.servicio.ComandoPeliculaTestDataBuilder;
 import com.ceiba.pelicula.comando.ComandoPelicula;
-import com.ceiba.pelicula.controlador.ComandoControladorPelicula;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;

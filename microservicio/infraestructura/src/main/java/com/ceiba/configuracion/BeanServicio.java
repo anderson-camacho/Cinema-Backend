@@ -49,7 +49,7 @@ public class BeanServicio {
     }
 
     /**
-     * Beans del Pelicula
+     * Beans del pelicula
      */
 
     @Bean

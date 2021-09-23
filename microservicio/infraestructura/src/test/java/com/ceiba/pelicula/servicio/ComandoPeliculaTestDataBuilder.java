@@ -1,8 +1,6 @@
-package com.ceiba.Pelicula.servicio;
+package com.ceiba.pelicula.servicio;
 
 import com.ceiba.pelicula.comando.ComandoPelicula;
-
-import java.util.UUID;
 
 public class ComandoPeliculaTestDataBuilder {
 
@@ -11,8 +9,6 @@ public class ComandoPeliculaTestDataBuilder {
     private String director;
 
     public ComandoPeliculaTestDataBuilder(){
-//        titulo = UUID.randomUUID().toString();
-//        director = UUID.randomUUID().toString();
         this.titulo = "blancanieves";
         this.director = "Anderson";
     }

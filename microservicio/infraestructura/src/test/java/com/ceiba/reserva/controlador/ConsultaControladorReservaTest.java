@@ -1,4 +1,4 @@
-package com.ceiba.horario.controlador;
+package com.ceiba.reserva.controlador;
 
 import com.ceiba.ApplicationMock;
 import org.hamcrest.core.IsNull;
@@ -17,19 +17,18 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = ApplicationMock.class)
-@WebMvcTest(ConsultaControladorHorario.class)
-public class ConsultaControladorHorarioTest {
+@WebMvcTest(ConsultaControladorReserva.class)
+public class ConsultaControladorReservaTest {
     @Autowired
     private MockMvc mockMvc;
 
     @Test
     public void listar() throws Exception {
-        mockMvc.perform(get("/horarios")
+        mockMvc.perform(get("/reservas")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[0].id", IsNull.notNullValue()))
-                .andExpect(jsonPath("$[0].idPelicula", IsNull.notNullValue()))
-                .andExpect(jsonPath("$[0].fecha", IsNull.notNullValue()))
-                .andExpect(jsonPath("$[0].cupos", IsNull.notNullValue()));
+                .andExpect(jsonPath("$[0].idUsuario", IsNull.notNullValue()))
+                .andExpect(jsonPath("$[0].idHorario", IsNull.notNullValue()));
     }
 }

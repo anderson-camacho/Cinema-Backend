@@ -28,19 +28,19 @@ public class ComandoControladorPelicula {
     }
 
     @PostMapping
-    @ApiOperation("Crear Pelicula")
+    @ApiOperation("Crear pelicula")
     public ComandoRespuesta<Long> crear(@RequestBody ComandoPelicula comandoPelicula) {
         return manejadorCrearPelicula.ejecutar(comandoPelicula);
     }
 
     @DeleteMapping(value="/{id}")
-    @ApiOperation("Eliminar Pelicula")
+    @ApiOperation("Eliminar pelicula")
     public void eliminar(@PathVariable Long id) {
         manejadorEliminarPelicula.ejecutar(id);
     }
 
     @PutMapping(value="/{id}")
-    @ApiOperation("Actualizar Pelicula")
+    @ApiOperation("Actualizar pelicula")
     public void actualizar(@RequestBody ComandoPelicula comandoPelicula,@PathVariable Long id) {
         comandoPelicula.setId(id);
         manejadorActualizarPelicula.ejecutar(comandoPelicula);

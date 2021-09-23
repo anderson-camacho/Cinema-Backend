@@ -8,7 +8,7 @@ public class ComandoReservaTestDataBuilder {
     private Long idHorario;
 
     public ComandoReservaTestDataBuilder() {
-        this.id = 2L;
+        this.id = 9L;
         this.idUsuario = 1L;
         this.idHorario = 1L;
     }
