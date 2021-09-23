@@ -2,6 +2,7 @@ package com.ceiba.Pelicula.controlador;
 
 import com.ceiba.ApplicationMock;
 import com.ceiba.pelicula.controlador.ConsultaControladorPelicula;
+import org.hamcrest.core.IsNull;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +31,6 @@ public class ConsultaControladorPeliculaTest {
         mockMvc.perform(get("/peliculas")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-//                .andExpect(jsonPath("$", hasSize(1)))
-                .andExpect(jsonPath("$[0].titulo", is("Maria")));
+                .andExpect(jsonPath("$[0].titulo", IsNull.notNullValue()));
     }
 }
