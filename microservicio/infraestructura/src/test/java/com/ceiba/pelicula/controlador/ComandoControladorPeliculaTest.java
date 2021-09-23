@@ -36,14 +36,14 @@ public class ComandoControladorPeliculaTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(pelicula)))
                 .andExpect(status().isOk())
-                .andExpect(content().json("{'valor': 3}"));
+                .andExpect(content().json("{'valor': 9}"));
 
     }
 
     @Test
     public void actualizar() throws Exception{
         // arrange
-        Long id = 1L;
+        Long id = 7L;
         ComandoPelicula pelicula = new ComandoPeliculaTestDataBuilder().build();
 
         // act - assert
@@ -56,7 +56,7 @@ public class ComandoControladorPeliculaTest {
 
     @Test
     public void eliminar() throws Exception{
-        Long id = 2L;
+        Long id = 7L;
         mockMvc.perform(delete("/peliculas/{id}",id)
                         .contentType(MediaType.APPLICATION_JSON)
                         .accept(MediaType.APPLICATION_JSON))

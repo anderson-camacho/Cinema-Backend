@@ -35,16 +35,24 @@ public class ComandoControladorHorarioTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(comandoHorario)))
                 .andExpect(status().isOk())
-                .andExpect(content().json("{'valor':4}"));
+                .andExpect(content().json("{'valor':10}"));
     }
 
     @Test
-    public void eliminar() throws Exception{
-        Long id = 1L;
+    public void eliminarCorrecto() throws Exception{
+        Long id = 8L;
         mockMvc.perform(delete("/horarios/{id}",id)
                         .contentType(MediaType.APPLICATION_JSON)
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
+    }
+    @Test
+    public void eliminarIncorrecto() throws Exception{
+        Long id = 1L;
+        mockMvc.perform(delete("/horarios/{id}",id)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().is5xxServerError());
     }
 
 }

@@ -40,13 +40,13 @@ public class ComandoControladorUsuarioTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(usuario)))
                 .andExpect(status().isOk())
-                .andExpect(content().json("{'valor': 2}"));
+                .andExpect(content().json("{'valor': 9}"));
     }
 
     @Test
     public void actualizar() throws Exception{
         // arrange
-        Long id = 2L;
+        Long id = 7L;
         ComandoUsuario usuario = new ComandoUsuarioTestDataBuilder().build();
 
         // act - assert
@@ -59,7 +59,7 @@ public class ComandoControladorUsuarioTest {
     @Test
     public void eliminar() throws Exception {
         // arrange
-        Long id = 2L;
+        Long id = 7L;
 
         // act - assert
         mocMvc.perform(delete("/usuarios/{id}",id)

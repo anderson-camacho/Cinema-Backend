@@ -1,6 +1,7 @@
 package com.ceiba.horario.controlador;
 
 import com.ceiba.ApplicationMock;
+import org.hamcrest.collection.IsEmptyCollection;
 import org.hamcrest.core.IsNull;
 import org.junit.Test;
 import org.junit.runner.RunWith;

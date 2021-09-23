@@ -1,4 +1,4 @@
---Datos de Pruebas
+--Datos para Test
 
 --Tabla Usuario
 insert into usuario(nombre,clave,fecha_creacion) values('anderson','1234',now());--1
