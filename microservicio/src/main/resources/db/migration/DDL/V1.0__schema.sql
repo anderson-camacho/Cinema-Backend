@@ -13,10 +13,10 @@ create table pelicula (
  primary key (id)
 );
 
-create table pelicula (
+create table horario (
  id int(11) not null auto_increment,
  idPelicula int(11) not null,
  fecha DATE not null,
- cupos int not null;
+ cupos int(50) not null;
  primary key (id)
 );

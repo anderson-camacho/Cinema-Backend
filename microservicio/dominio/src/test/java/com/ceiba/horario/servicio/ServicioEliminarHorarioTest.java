@@ -5,10 +5,6 @@ import com.ceiba.dominio.excepcion.ExcepcionExiste;
 import com.ceiba.horario.modelo.entidad.Horario;
 import com.ceiba.horario.puerto.repositorio.RepositorioHorario;
 import com.ceiba.horario.testdatabuilder.HorarioTestDataBuilder;
-import com.ceiba.pelicula.modelo.entidad.Pelicula;
-import com.ceiba.pelicula.puerto.repositorio.RepositorioPelicula;
-import com.ceiba.pelicula.servicio.ServicioEliminarPelicula;
-import com.ceiba.pelicula.testdatabuilder.PeliculaTestDataBuilder;
 import org.junit.Test;
 import org.mockito.Mockito;
 
