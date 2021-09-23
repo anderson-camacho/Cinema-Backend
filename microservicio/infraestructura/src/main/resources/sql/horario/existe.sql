@@ -1,1 +1,1 @@
-select count(1) from horario where idPelicula = :idPelicula
+select count(1) from horario where id = :id

@@ -35,14 +35,4 @@ public class Horario {
 
     }
 
-    private LocalDate formatearFechaStringToLocalDate(String date) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/LL/yyyy");
-        LocalDate localDate = LocalDate.parse(date);
-        return localDate;
-    }
-
-    private String formatearFechaLocalDateAString(LocalDate date) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/LL/yyyy");
-        return formatter.format(date);
-    }
 }
