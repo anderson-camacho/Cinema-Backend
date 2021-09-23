@@ -12,7 +12,7 @@ public class ComandoHorarioTestDataBuilder {
     private Long cupos;
 
     public ComandoHorarioTestDataBuilder() {
-        idPelicula = 99L;
+        idPelicula = 2L;
         fecha = LocalDate.now();
         cupos = 60L;
     }
