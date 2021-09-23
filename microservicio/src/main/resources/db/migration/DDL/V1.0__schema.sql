@@ -21,3 +21,12 @@ create table horario (
  primary key (id),
  foreign key (idPelicula) references pelicula (id)
 );
+
+create table reserva (
+ id int(11) not null auto_increment,
+ idHorario int(11) not null,
+ idUsuario int(11) not null,
+ primary key (id),
+ foreign key (idHorario) references horario (id),
+ foreign key (idUsuario) references usuario (id)
+);
