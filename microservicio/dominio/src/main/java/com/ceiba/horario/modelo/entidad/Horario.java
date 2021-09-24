@@ -37,4 +37,19 @@ public class Horario {
 
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public Long getIdPelicula() {
+        return idPelicula;
+    }
+
+    public LocalDate getFecha() {
+        return fecha;
+    }
+
+    public Long getCupos() {
+        return cupos;
+    }
 }
