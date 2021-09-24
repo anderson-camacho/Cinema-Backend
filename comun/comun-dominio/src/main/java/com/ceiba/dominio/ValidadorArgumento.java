@@ -19,6 +19,7 @@ public class ValidadorArgumento {
     }
 
     public static void validarFecha(LocalDate fecha, String mensaje) {
+        LocalDate local = LocalDate.now().minusDays(1);
         if (fecha.isBefore(LocalDate.now())) {
             throw new ExcepcionFechaInvalida(mensaje);
         }

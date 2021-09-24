@@ -60,4 +60,7 @@ public class EntidadHorarioTest {
         BasePrueba.assertThrows(() -> horarioTestDataBuilder.build(), ExcepcionFechaInvalida.class, SE_DEBE_INGRESAR_LA_FECHA_MAYOR_A_HOY);
     }
 
+
+
+
 }

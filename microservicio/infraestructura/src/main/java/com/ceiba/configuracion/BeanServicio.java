@@ -58,8 +58,8 @@ public class BeanServicio {
     }
 
     @Bean
-    ServicioEliminarPelicula servicioEliminarPelicula(RepositorioPelicula repositorioPelicula) {
-        return new ServicioEliminarPelicula(repositorioPelicula);
+    ServicioEliminarPelicula servicioEliminarPelicula(RepositorioPelicula repositorioPelicula, RepositorioHorario repositorioHorario) {
+        return new ServicioEliminarPelicula(repositorioPelicula, repositorioHorario);
     }
 
     @Bean

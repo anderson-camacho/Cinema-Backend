@@ -11,6 +11,7 @@ import org.mockito.Mockito;
 public class ServicioCrearPeliculaTest {
 
     private static final String LA_PELICULA_YA_EXISTE_EN_EL_SISTEMA = "La pelicula ya existe en el sistema";
+//    private static final String LA_PELICULA_YA_EXISTE_EN_EL_SISTEMA = "La pelicula ya existe en el sistema";
 
     @Test
     public void validarPeliculaExistenciaPreviaTest() {

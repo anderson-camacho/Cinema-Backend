@@ -15,7 +15,7 @@ public class ServicioEliminarHorarioTest {
     @Test
     public void validarPeliculaExistenciaPreviaTest() {
         // arrange
-        Horario horario = new HorarioTestDataBuilder().conId(5L).build();
+//        Horario horario = new HorarioTestDataBuilder().conId(1L).build();
         RepositorioHorario repositorioHorario = Mockito.mock(RepositorioHorario.class);
         Mockito.when(repositorioHorario.existe(Mockito.anyLong())).thenReturn(false);
         ServicioEliminarHorario servicioEliminarHorario = new ServicioEliminarHorario(repositorioHorario);

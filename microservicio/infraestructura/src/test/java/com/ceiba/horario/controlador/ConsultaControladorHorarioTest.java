@@ -24,7 +24,7 @@ public class ConsultaControladorHorarioTest {
     private MockMvc mockMvc;
 
     @Test
-    public void listar() throws Exception {
+    public void listarHorariosConFechaSuperiorAHoy() throws Exception {
         mockMvc.perform(get("/horarios")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())

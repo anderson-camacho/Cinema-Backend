@@ -5,5 +5,5 @@ import com.ceiba.horario.modelo.dto.DtoHorario;
 import java.util.List;
 
 public interface DaoHorario {
-    List<DtoHorario> listar();
+    List<DtoHorario> listarHorariosConFechaSuperiorAHoy();
 }

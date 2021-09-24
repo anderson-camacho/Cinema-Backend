@@ -25,6 +25,9 @@ public class RepositorioHorarioMysql implements RepositorioHorario {
     @SqlStatement(namespace = "horario", value = "existeExcluyendoId")
     private static String sqlExisteExcluyendoId;
 
+    @SqlStatement(namespace = "horario", value = "existePelicula")
+    private static String sqlExistePelicula;
+
     public RepositorioHorarioMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
         this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;
     }
@@ -48,6 +51,13 @@ public class RepositorioHorarioMysql implements RepositorioHorario {
         MapSqlParameterSource parameterSource = new MapSqlParameterSource();
         parameterSource.addValue("id", id);
         return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExiste, parameterSource, Boolean.class);
+    }
+
+    @Override
+    public boolean existePelicula(Long idPelicula) {
+        MapSqlParameterSource parameterSource = new MapSqlParameterSource();
+        parameterSource.addValue("idPelicula", idPelicula);
+        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExistePelicula, parameterSource, Boolean.class);
     }
 
 }

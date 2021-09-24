@@ -6,6 +6,7 @@ public interface RepositorioHorario {
 
     /**
      * Permite crear una horario
+     *
      * @param horario
      * @return el id generado
      */
@@ -13,16 +14,26 @@ public interface RepositorioHorario {
 
     /**
      * Permite eliminar una horario
+     *
      * @param id
      */
     void eliminar(Long id);
 
     /**
      * Permite validar si existe un horario
+     *
      * @param id
      * @return si existe o no
      */
     boolean existe(Long id);
+
+    /**
+     * Permite validar si existe un horario
+     *
+     * @param idPelicula
+     * @return si existe o no
+     */
+    boolean existePelicula(Long idPelicula);
 
 
 }

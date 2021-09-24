@@ -3,15 +3,12 @@ package com.ceiba.horario.testdatabuilder;
 import com.ceiba.horario.modelo.entidad.Horario;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 public class HorarioTestDataBuilder {
     private Long id;
     private Long idPelicula;
     private LocalDate fecha;
     private Long cupos;
-
-    private static final Long MAYOR_A_CERO = 0L;
 
     public HorarioTestDataBuilder() {
         this.idPelicula = 1L;
@@ -23,8 +20,8 @@ public class HorarioTestDataBuilder {
         return this;
     }
 
-    public HorarioTestDataBuilder conCupo(Long cupos){
-        this.cupos = cupos;
+    public HorarioTestDataBuilder conIdPelicula(Long idPelicula){
+        this.idPelicula = idPelicula;
         return this;
     }
 
@@ -42,7 +39,6 @@ public class HorarioTestDataBuilder {
         return this;
     }
 
-
     public HorarioTestDataBuilder sinFecha(){
         this.fecha = null;
         return this;
@@ -57,14 +53,4 @@ public class HorarioTestDataBuilder {
         return new Horario(this.id, this.idPelicula, this.fecha, this.cupos);
     }
 
-    private LocalDate formatearFechaStringToLocalDate(String date) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/LL/yyyy");
-        LocalDate localDate = LocalDate.parse(date);
-        return localDate;
-    }
-
-    private String formatearFechaLocalDateAString(LocalDate date) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/LL/yyyy");
-        return formatter.format(date);
-    }
 }

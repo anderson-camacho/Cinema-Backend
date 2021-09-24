@@ -22,7 +22,7 @@ public class ConsultaControladorHorario {
 
     @GetMapping
     @ApiOperation("Lista Horarios")
-    public List<DtoHorario> listar() {
+    public List<DtoHorario> listarHorariosConFechaSuperiorAHoy() {
         return this.manejadorListaHorarios.ejecutar();
     }
 }

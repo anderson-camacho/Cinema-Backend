@@ -15,6 +15,6 @@ public class ManejadorListaHorarios {
     }
 
     public List<DtoHorario> ejecutar() {
-        return this.daoHorario.listar();
+        return this.daoHorario.listarHorariosConFechaSuperiorAHoy();
     }
 }
