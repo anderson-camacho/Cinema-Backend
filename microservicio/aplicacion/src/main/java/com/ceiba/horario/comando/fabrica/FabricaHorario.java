@@ -12,7 +12,6 @@ public class FabricaHorario {
                 comandoHorario.getIdPelicula(),
                 comandoHorario.getFecha(),
                 comandoHorario.getCupos()
-
         );
     }
 }
