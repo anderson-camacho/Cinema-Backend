@@ -81,11 +81,11 @@ insert into reserva(idUsuario, idHorario) values(3, 4);--4
 insert into reserva(idUsuario, idHorario) values(4, 5);--5
 insert into reserva(idUsuario, idHorario) values(5, 6);--6
 insert into reserva(idUsuario, idHorario) values(4, 1);--7
-insert into reserva(idUsuario, idHorario) values(2, 3);--8
+insert into reserva(idUsuario, idHorario) values(2, 7);--8
 --Datos para eliminar:: no usar para otra cosa
 ----------------------------------------------------------------------------------------
 insert into reserva(idUsuario, idHorario) values(3, 3);--9
-insert into reserva(idUsuario, idHorario) values(3, 2);--10
+insert into reserva(idUsuario, idHorario) values(3, 8);--10
 insert into reserva(idUsuario, idHorario) values(4, 4);--11
 ----------------------------------------------------------------------------------------
 

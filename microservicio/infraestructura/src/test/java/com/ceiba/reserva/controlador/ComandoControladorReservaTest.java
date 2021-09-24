@@ -29,8 +29,8 @@ public class ComandoControladorReservaTest {
     private MockMvc mockMvc;
 
     @Test
-    public void crear() throws Exception {
-        ComandoReserva comandoReserva = new ComandoReservaTestDataBuilder().conIdUsuario(3L).conIdHorario(2L).build();
+    public void crearConExito() throws Exception {
+        ComandoReserva comandoReserva = new ComandoReservaTestDataBuilder().conIdUsuario(7L).conIdHorario(8L).build();
 
         mockMvc.perform(post("/reservas")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -40,8 +40,8 @@ public class ComandoControladorReservaTest {
     }
 
     @Test
-    public void crearConYaExiste() throws Exception {
-        ComandoReserva comandoReserva = new ComandoReservaTestDataBuilder().conIdUsuario(3L).conIdHorario(2L).build();
+    public void intentarCrearReservaExistente() throws Exception {
+        ComandoReserva comandoReserva = new ComandoReservaTestDataBuilder().conIdUsuario(1L).conIdHorario(1L).build();
 
         mockMvc.perform(post("/reservas")
                         .contentType(MediaType.APPLICATION_JSON)

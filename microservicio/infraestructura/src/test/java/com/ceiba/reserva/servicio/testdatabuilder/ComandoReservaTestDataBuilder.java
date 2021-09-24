@@ -19,7 +19,7 @@ public class ComandoReservaTestDataBuilder {
     }
 
     public ComandoReservaTestDataBuilder conIdHorario(Long idHorario) {
-        this.idUsuario = idHorario;
+        this.idHorario = idHorario;
         return this;
     }
 

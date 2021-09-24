@@ -40,7 +40,7 @@ public class ComandoControladorHorarioTest {
 
     @Test
     public void eliminarCorrecto() throws Exception{
-        Long id = 8L;
+        Long id = 9L;
         mockMvc.perform(delete("/horarios/{id}",id)
                         .contentType(MediaType.APPLICATION_JSON)
                         .accept(MediaType.APPLICATION_JSON))

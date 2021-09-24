@@ -28,6 +28,12 @@ public class RepositorioHorarioMysql implements RepositorioHorario {
     @SqlStatement(namespace = "horario", value = "existePelicula")
     private static String sqlExistePelicula;
 
+    @SqlStatement(namespace = "horario", value = "seReservo")
+    private static String sqlSeReservo;
+
+    @SqlStatement(namespace = "horario", value = "cuposRestantes")
+    private static String sqlCuposRestantes;
+
     public RepositorioHorarioMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
         this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;
     }
@@ -58,6 +64,23 @@ public class RepositorioHorarioMysql implements RepositorioHorario {
         MapSqlParameterSource parameterSource = new MapSqlParameterSource();
         parameterSource.addValue("idPelicula", idPelicula);
         return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExistePelicula, parameterSource, Boolean.class);
+    }
+
+    @Override
+    public void seReservo(Long id) {
+        MapSqlParameterSource parameterSource = new MapSqlParameterSource();
+        parameterSource.addValue("id", id);
+        Long cupos = this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlCuposRestantes,parameterSource,Long.class);
+        cupos = cupos - 1;
+        parameterSource.addValue("cupos", cupos);
+        this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().update(sqlSeReservo, parameterSource);
+    }
+
+    @Override
+    public Boolean cuposRestantes(Long id) {
+        MapSqlParameterSource parameterSource = new MapSqlParameterSource();
+        parameterSource.addValue("id", id);
+        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlCuposRestantes, parameterSource, Boolean.class);
     }
 
 }

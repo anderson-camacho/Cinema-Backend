@@ -25,8 +25,8 @@ public class BeanServicio {
      */
 
     @Bean
-    public ServicioCrearReserva servicioCrearReserva(RepositorioReserva repositorioReserva) {
-        return new ServicioCrearReserva(repositorioReserva);
+    public ServicioCrearReserva servicioCrearReserva(RepositorioReserva repositorioReserva, RepositorioHorario repositorioHorario) {
+        return new ServicioCrearReserva(repositorioReserva, repositorioHorario);
     }
 
     @Bean

@@ -35,5 +35,21 @@ public interface RepositorioHorario {
      */
     boolean existePelicula(Long idPelicula);
 
+    /**
+     * Permite validar si existe un horario
+     *
+     * @param id
+     * @return si existe o no
+     */
+    void seReservo(Long id);
+
+    /**
+     * Permite validar si existe un horario
+     *
+     * @param id
+     * @return si existe o no
+     */
+    Boolean cuposRestantes(Long id);
+
 
 }

@@ -59,7 +59,7 @@ public class ComandoControladorUsuarioTest {
     @Test
     public void eliminar() throws Exception {
         // arrange
-        Long id = 7L;
+        Long id = 8L;
 
         // act - assert
         mocMvc.perform(delete("/usuarios/{id}",id)
