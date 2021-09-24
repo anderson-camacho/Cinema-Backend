@@ -76,8 +76,8 @@ public class BeanServicio {
     }
 
     @Bean
-    public ServicioEliminarUsuario servicioEliminarUsuario(RepositorioUsuario repositorioUsuario) {
-        return new ServicioEliminarUsuario(repositorioUsuario);
+    public ServicioEliminarUsuario servicioEliminarUsuario(RepositorioUsuario repositorioUsuario, RepositorioReserva repositorioReserva) {
+        return new ServicioEliminarUsuario(repositorioUsuario, repositorioReserva);
     }
 
     @Bean
