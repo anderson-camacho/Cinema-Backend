@@ -10,7 +10,6 @@ import java.time.LocalDateTime;
 public class DtoUsuario {
     private Long id;
     private String nombre;
-    private String clave;
     private LocalDateTime fechaCreacion;
 
 }

@@ -6,6 +6,7 @@ import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 
 public class MapeoHorario implements RowMapper<DtoHorario>, MapperResult {
 
@@ -15,7 +16,6 @@ public class MapeoHorario implements RowMapper<DtoHorario>, MapperResult {
         Long idPelicula = rs.getLong("idPelicula");
         String fecha = rs.getString("fecha");
         Long cupos = rs.getLong("cupos");
-
         return new DtoHorario(id, idPelicula, fecha, cupos);
     }
 }

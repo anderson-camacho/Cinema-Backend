@@ -12,7 +12,6 @@ public class FabricaUsuario {
         return new Usuario(
                 comandoUsuario.getId(),
                 comandoUsuario.getNombre(),
-                comandoUsuario.getClave(),
                 comandoUsuario.getFecha()
         );
     }

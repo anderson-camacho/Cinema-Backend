@@ -1,16 +1,16 @@
 --Datos para Test
 
 --Tabla Usuario
-insert into usuario(nombre,clave,fecha_creacion) values('anderson','1234',now());--1
-insert into usuario(nombre,clave,fecha_creacion) values('ana','1234',now());--2
-insert into usuario(nombre,clave,fecha_creacion) values('maria','1234',now());--3
-insert into usuario(nombre,clave,fecha_creacion) values('tatiana','1234',now());--4
-insert into usuario(nombre,clave,fecha_creacion) values('mildrey','1234',now());--5
+insert into usuario(nombre,fecha_creacion) values('anderson',now());--1
+insert into usuario(nombre,fecha_creacion) values('ana',now());--2
+insert into usuario(nombre,fecha_creacion) values('maria',now());--3
+insert into usuario(nombre,fecha_creacion) values('tatiana',now());--4
+insert into usuario(nombre,fecha_creacion) values('mildrey',now());--5
 --Datos para eliminar :: no usar para otra cosa
 ----------------------------------------------------------------------------------------
-insert into usuario(nombre,clave,fecha_creacion) values('golum','1234',now());--6
-insert into usuario(nombre,clave,fecha_creacion) values('boldemord','1234',now());--7
-insert into usuario(nombre,clave,fecha_creacion) values('miEx','1234',now());--8
+insert into usuario(nombre,fecha_creacion) values('golum',now());--6
+insert into usuario(nombre,fecha_creacion) values('boldemord',now());--7
+insert into usuario(nombre,fecha_creacion) values('miEx',now());--8
 ----------------------------------------------------------------------------------------
 
 --Tabla Pelicula

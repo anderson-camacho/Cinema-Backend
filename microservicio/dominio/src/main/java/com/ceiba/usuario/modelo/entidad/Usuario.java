@@ -20,18 +20,14 @@ public class Usuario {
 
     private Long id;
     private String nombre;
-    private String clave;
     private LocalDateTime fechaCreacion;
 
-    public Usuario(Long id,String nombre, String clave,LocalDateTime fechaCreacion) {
+    public Usuario(Long id,String nombre,LocalDateTime fechaCreacion) {
         validarObligatorio(nombre, SE_DEBE_INGRESAR_EL_NOMBRE_DE_USUARIO);
-        validarObligatorio(clave, SE_DEBE_INGRESAR_LA_CLAVE);
-        validarLongitud(clave, LONGITUD_MINIMA_CLAVE, String.format(LA_CLAVE_DEBE_TENER_UNA_LONGITUD_MAYOR_O_IGUAL_A,LONGITUD_MINIMA_CLAVE));
         validarObligatorio(fechaCreacion, SE_DEBE_INGRESAR_LA_FECHA_CREACION);
 
         this.id = id;
         this.nombre = nombre;
-        this.clave = clave;
         this.fechaCreacion = fechaCreacion;
     }
 

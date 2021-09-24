@@ -30,7 +30,6 @@ public class ConsultaControladorUsuarioTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[0].id", IsNull.notNullValue()))
                 .andExpect(jsonPath("$[0].nombre", IsNull.notNullValue()))
-                .andExpect(jsonPath("$[0].clave", IsNull.notNullValue()))
                 .andExpect(jsonPath("$[0].fechaCreacion", IsNull.notNullValue()));
     }
 }
