@@ -37,4 +37,12 @@ public interface RepositorioReserva {
      */
     boolean existeUsuario(Long idUsuario);
 
+    /**
+     * Permite validar si existe un usuario con un nombre
+     *
+     * @param idUsuario
+     * @return si existe o no
+     */
+    boolean usuarioYaReservo(Long idUsuario, Long idHorario);
+
 }

@@ -6,7 +6,7 @@ import com.ceiba.reserva.puerto.repositorio.RepositorioReserva;
 
 public class ServicioCrearReserva {
 
-    private static final String LA_RESERVA_YA_EXISTE = "La reserva ya existe";
+    private static final String LA_RESERVA_YA_EXISTE = "La reserva ya existe para este usuario";
 
     private final RepositorioReserva repositorioReserva;
 
@@ -15,12 +15,12 @@ public class ServicioCrearReserva {
     }
 
     public Long ejecutar(Reserva reserva) {
-        validarExistenciaPrevia(reserva);
+        validarUsuarioYaReservo(reserva);
         return this.repositorioReserva.crear(reserva);
     }
 
-    private void validarExistenciaPrevia(Reserva reserva) {
-        boolean existe = this.repositorioReserva.existe(reserva.getId());
+    private void validarUsuarioYaReservo(Reserva reserva) {
+        boolean existe = this.repositorioReserva.usuarioYaReservo(reserva.getIdUsuario(), reserva.getIdHorario());
         if (existe) {
             throw new ExcepcionDuplicidad(LA_RESERVA_YA_EXISTE);
         }

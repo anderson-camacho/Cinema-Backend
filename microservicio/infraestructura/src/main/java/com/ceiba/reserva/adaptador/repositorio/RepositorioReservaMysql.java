@@ -24,6 +24,9 @@ public class RepositorioReservaMysql implements RepositorioReserva {
     @SqlStatement(namespace = "reserva", value = "existeUsuario")
     private static String sqlExisteUsuario;
 
+    @SqlStatement(namespace = "reserva", value = "usuarioYaReservo")
+    private static String sqlUsuarioYaReservo;
+
     public RepositorioReservaMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
         this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;
     }
@@ -57,5 +60,13 @@ public class RepositorioReservaMysql implements RepositorioReserva {
         parameterSource.addValue("idUsuario", idUsuario);
         return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExisteUsuario, parameterSource, Boolean.class);
 
+    }
+
+    @Override
+    public boolean usuarioYaReservo(Long idUsuario, Long idHorario) {
+        MapSqlParameterSource parameterSource = new MapSqlParameterSource();
+        parameterSource.addValue("idUsuario", idUsuario);
+        parameterSource.addValue("idHorario", idHorario);
+        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlUsuarioYaReservo, parameterSource, Boolean.class);
     }
 }
