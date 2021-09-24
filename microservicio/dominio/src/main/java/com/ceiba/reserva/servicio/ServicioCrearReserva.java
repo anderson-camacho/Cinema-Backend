@@ -19,6 +19,7 @@ public class ServicioCrearReserva {
         this.repositorioHorario = repositorioHorario;
     }
 
+
     public Long ejecutar(Reserva reserva) {
         validarUsuarioYaReservo(reserva);
         validarHayCuposEnHorario(reserva);
@@ -29,6 +30,7 @@ public class ServicioCrearReserva {
     private void seReserva(Reserva reserva) {
         repositorioHorario.seReservo(reserva.getIdHorario());
     }
+
 
     private void validarUsuarioYaReservo(Reserva reserva) {
         boolean existe = this.repositorioReserva.usuarioYaReservo(reserva.getIdUsuario(), reserva.getIdHorario());

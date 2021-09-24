@@ -19,6 +19,11 @@ public class ReservaTestDataBuilder {
         return this;
     }
 
+    public ReservaTestDataBuilder connIdHorario(Long idHorario) {
+        this.idHorario = idHorario;
+        return this;
+    }
+
     public ReservaTestDataBuilder sinIdUsuario() {
         this.idUsuario = null;
         return this;

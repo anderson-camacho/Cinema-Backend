@@ -19,6 +19,6 @@ public class ServicioEliminarReservaTest {
         Mockito.when(repositorioReserva.existe(Mockito.anyLong())).thenReturn(false);
         ServicioEliminarReserva servicioEliminarReserva = new ServicioEliminarReserva(repositorioReserva);
         // act - assert
-        BasePrueba.assertThrows(() -> servicioEliminarReserva.ejecutar(1L), ExcepcionExiste.class, LA_RESERVA_NO_EXISTE);
+        BasePrueba.assertThrows(() -> servicioEliminarReserva.ejecutar(5L), ExcepcionExiste.class, LA_RESERVA_NO_EXISTE);
     }
 }
