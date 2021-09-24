@@ -17,11 +17,6 @@ public class ComandoUsuarioTestDataBuilder {
         fecha = LocalDateTime.now();
     }
 
-    public ComandoUsuarioTestDataBuilder conNombre(String nombre) {
-        this.nombre = nombre;
-        return this;
-    }
-
     public ComandoUsuario build() {
         return new ComandoUsuario(id,nombre,fecha);
     }

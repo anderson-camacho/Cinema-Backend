@@ -15,15 +15,6 @@ public class HorarioTestDataBuilder {
         this.fecha = LocalDate.now();
         this.cupos = 60L;
     }
-    public HorarioTestDataBuilder conId(Long id) {
-        this.id = id;
-        return this;
-    }
-
-    public HorarioTestDataBuilder conIdPelicula(Long idPelicula){
-        this.idPelicula = idPelicula;
-        return this;
-    }
 
     public HorarioTestDataBuilder sinIdPelicula(){
         this.idPelicula = null;

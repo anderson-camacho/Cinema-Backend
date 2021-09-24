@@ -2,9 +2,7 @@ package com.ceiba.horario.servicio;
 
 import com.ceiba.BasePrueba;
 import com.ceiba.dominio.excepcion.ExcepcionExiste;
-import com.ceiba.horario.modelo.entidad.Horario;
 import com.ceiba.horario.puerto.repositorio.RepositorioHorario;
-import com.ceiba.horario.testdatabuilder.HorarioTestDataBuilder;
 import org.junit.Test;
 import org.mockito.Mockito;
 

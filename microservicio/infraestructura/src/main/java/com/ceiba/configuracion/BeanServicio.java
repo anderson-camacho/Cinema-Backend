@@ -21,7 +21,7 @@ import org.springframework.context.annotation.Configuration;
 public class BeanServicio {
 
     /**
-     * Beans del Horario
+     * Beans de la Reserva
      */
 
     @Bean

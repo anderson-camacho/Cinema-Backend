@@ -19,16 +19,6 @@ public class ReservaTestDataBuilder {
         return this;
     }
 
-    public ReservaTestDataBuilder conIdUsuario(Long idUsuario) {
-        this.idUsuario = idUsuario;
-        return this;
-    }
-
-    public ReservaTestDataBuilder conIdHorario(Long idHorario) {
-        this.idHorario = idHorario;
-        return this;
-    }
-
     public ReservaTestDataBuilder sinIdUsuario() {
         this.idUsuario = null;
         return this;

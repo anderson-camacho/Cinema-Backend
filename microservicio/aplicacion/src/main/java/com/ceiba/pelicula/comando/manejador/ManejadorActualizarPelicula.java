@@ -5,10 +5,6 @@ import com.ceiba.pelicula.comando.ComandoPelicula;
 import com.ceiba.pelicula.comando.fabrica.FabricaPelicula;
 import com.ceiba.pelicula.modelo.entidad.Pelicula;
 import com.ceiba.pelicula.servicio.ServicioActualizarPelicula;
-import com.ceiba.usuario.comando.ComandoUsuario;
-import com.ceiba.usuario.comando.fabrica.FabricaUsuario;
-import com.ceiba.usuario.modelo.entidad.Usuario;
-import com.ceiba.usuario.servicio.ServicioActualizarUsuario;
 import org.springframework.stereotype.Component;
 
 @Component
