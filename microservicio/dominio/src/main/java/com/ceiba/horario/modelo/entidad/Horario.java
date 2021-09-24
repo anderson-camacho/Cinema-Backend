@@ -1,3 +1,6 @@
+/**
+ * @author Anderson Camacho
+ */
 package com.ceiba.horario.modelo.entidad;
 
 import lombok.Getter;
