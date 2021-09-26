@@ -40,10 +40,8 @@ public class RepositorioHorarioMysql implements RepositorioHorario {
 
     @Override
     public Long crear(Horario horario) {
-
         return customNamedParameterJdbcTemplate.crear(horario, sqlCrear);
     }
-
 
     @Override
     public void eliminar(Long id) {
@@ -82,5 +80,4 @@ public class RepositorioHorarioMysql implements RepositorioHorario {
         parameterSource.addValue("id", id);
         return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlCuposRestantes, parameterSource, Boolean.class);
     }
-
 }

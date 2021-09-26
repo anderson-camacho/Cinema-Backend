@@ -31,12 +31,10 @@ public class RepositorioReservaMysql implements RepositorioReserva {
         this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;
     }
 
-
     @Override
     public Long crear(Reserva reserva) {
         return customNamedParameterJdbcTemplate.crear(reserva, sqlCrear);
     }
-
 
     @Override
     public void eliminar(Long id) {
