@@ -13,8 +13,8 @@ public class Reserva {
     private Long idHorario;
 
     public Reserva(Long id, Long idUsuario, Long idHorario) {
-        validarObligatorio(idUsuario, "El id del usuario debe ser ingresado");
-        validarObligatorio(idHorario, "El id del horario debe ser ingresado");
+        validarObligatorio(idUsuario, EL_ID_DEL_USUARIO_DEBE_SER_INGRESADO);
+        validarObligatorio(idHorario, EL_ID_DEL_HORARIO_DEBE_SER_INGRESADO);
         this.id = id;
         this.idUsuario = idUsuario;
         this.idHorario = idHorario;
