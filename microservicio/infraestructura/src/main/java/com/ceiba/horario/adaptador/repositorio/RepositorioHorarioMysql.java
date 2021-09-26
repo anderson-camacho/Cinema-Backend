@@ -59,7 +59,7 @@ public class RepositorioHorarioMysql implements RepositorioHorario {
     @Override
     public boolean existePelicula(Long idPelicula) {
         return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate()
-                .queryForObject(sqlExistePelicula, construccionParamSourceId(idPelicula), Boolean.class);
+                .queryForObject(sqlExistePelicula, construccionParamSourceIdPelicula(idPelicula), Boolean.class);
     }
 
     @Override
@@ -82,6 +82,11 @@ public class RepositorioHorarioMysql implements RepositorioHorario {
     private MapSqlParameterSource construccionParamSourceId(Long id) {
         MapSqlParameterSource paramSource = new MapSqlParameterSource();
         paramSource.addValue("id", id);
+        return paramSource;
+    }
+    private MapSqlParameterSource construccionParamSourceIdPelicula(Long idPelicula) {
+        MapSqlParameterSource paramSource = new MapSqlParameterSource();
+        paramSource.addValue("idPelicula", idPelicula);
         return paramSource;
     }
 }
