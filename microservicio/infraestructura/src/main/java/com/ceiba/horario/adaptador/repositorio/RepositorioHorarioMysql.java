@@ -52,16 +52,14 @@ public class RepositorioHorarioMysql implements RepositorioHorario {
 
     @Override
     public boolean existe(Long id) {
-        MapSqlParameterSource parameterSource = new MapSqlParameterSource();
-        parameterSource.addValue("id", id);
-        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExiste, parameterSource, Boolean.class);
+        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate()
+                .queryForObject(sqlExiste, construccionParamSourceId(id), Boolean.class);
     }
 
     @Override
     public boolean existePelicula(Long idPelicula) {
-        MapSqlParameterSource parameterSource = new MapSqlParameterSource();
-        parameterSource.addValue("idPelicula", idPelicula);
-        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExistePelicula, parameterSource, Boolean.class);
+        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate()
+                .queryForObject(sqlExistePelicula, construccionParamSourceId(idPelicula), Boolean.class);
     }
 
     @Override
@@ -79,5 +77,11 @@ public class RepositorioHorarioMysql implements RepositorioHorario {
         MapSqlParameterSource parameterSource = new MapSqlParameterSource();
         parameterSource.addValue("id", id);
         return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlCuposRestantes, parameterSource, Boolean.class);
+    }
+
+    private MapSqlParameterSource construccionParamSourceId(Long id) {
+        MapSqlParameterSource paramSource = new MapSqlParameterSource();
+        paramSource.addValue("id", id);
+        return paramSource;
     }
 }
