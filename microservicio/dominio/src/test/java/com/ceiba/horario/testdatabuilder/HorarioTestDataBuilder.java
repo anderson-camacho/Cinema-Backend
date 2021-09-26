@@ -16,6 +16,11 @@ public class HorarioTestDataBuilder {
         this.cupos = 60L;
     }
 
+    public HorarioTestDataBuilder conIdPelicula(){
+        this.idPelicula = 1L;
+        return this;
+    }
+
     public HorarioTestDataBuilder sinIdPelicula(){
         this.idPelicula = null;
         return this;

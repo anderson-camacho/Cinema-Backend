@@ -21,6 +21,17 @@ public class ServicioCrearHorarioTest {
         // act - assert
         BasePrueba.assertThrows(() -> servicioCrearHorario.ejecutar(horario), ExcepcionDuplicidad.class, EL_HORARIO_YA_EXISTE_EN_EL_SISTEMA);
     }
+
+    @Test
+    public void validarPeliculaNoExistenciaPreviaTest() {
+        // arrange
+        Horario horario = new HorarioTestDataBuilder().conIdPelicula().build();
+        RepositorioHorario repositorioHorario = Mockito.mock(RepositorioHorario.class);
+        Mockito.when(repositorioHorario.existe(Mockito.anyLong())).thenReturn(true);
+        ServicioCrearHorario servicioCrearHorario = new ServicioCrearHorario(repositorioHorario);
+        // act - assert
+        BasePrueba.assertThrows(() -> servicioCrearHorario.ejecutar(horario), ExcepcionDuplicidad.class, EL_HORARIO_YA_EXISTE_EN_EL_SISTEMA);
+    }
 }
 
 
