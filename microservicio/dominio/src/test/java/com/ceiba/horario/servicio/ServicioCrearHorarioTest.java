@@ -32,8 +32,7 @@ public class ServicioCrearHorarioTest {
         ServicioCrearHorario servicioCrearHorario = new ServicioCrearHorario(repositorioHorario);
         // act - assert
         Assert.assertNotNull(servicioCrearHorario.ejecutar(horario));
-        //BasePrueba.assertThrows(() -> servicioCrearHorario.ejecutar(horario), ExcepcionDuplicidad.class, EL_HORARIO_YA_EXISTE_EN_EL_SISTEMA);
-    }
+     }
 }
 
 
