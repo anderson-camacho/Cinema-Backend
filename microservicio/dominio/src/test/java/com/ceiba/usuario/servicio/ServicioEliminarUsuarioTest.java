@@ -2,11 +2,6 @@ package com.ceiba.usuario.servicio;
 
 import com.ceiba.BasePrueba;
 import com.ceiba.dominio.excepcion.ExcepcionExiste;
-import com.ceiba.horario.puerto.repositorio.RepositorioHorario;
-import com.ceiba.pelicula.modelo.entidad.Pelicula;
-import com.ceiba.pelicula.puerto.repositorio.RepositorioPelicula;
-import com.ceiba.pelicula.servicio.ServicioEliminarPelicula;
-import com.ceiba.pelicula.testdatabuilder.PeliculaTestDataBuilder;
 import com.ceiba.reserva.puerto.repositorio.RepositorioReserva;
 import com.ceiba.usuario.puerto.repositorio.RepositorioUsuario;
 import org.junit.Test;
