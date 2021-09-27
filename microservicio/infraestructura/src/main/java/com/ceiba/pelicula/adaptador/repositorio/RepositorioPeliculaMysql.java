@@ -12,21 +12,20 @@ public class RepositorioPeliculaMysql implements RepositorioPelicula {
 
     private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
 
-    @SqlStatement(namespace = "pelicula", value = "crear")
-    private static String sqlCrear;
+    @SqlStatement(namespace = "pelicula", value = "crearPelicula")
+    private static String sqlCrearPelicula;
 
-    @SqlStatement(namespace = "pelicula", value = "actualizar")
-    private static String sqlActualizar;
+    @SqlStatement(namespace = "pelicula", value = "actualizarPelicula")
+    private static String sqlActualizarPelicula;
 
-    @SqlStatement(namespace = "pelicula", value = "eliminar")
-    private static String sqlEliminar;
+    @SqlStatement(namespace = "pelicula", value = "eliminarPelicula")
+    private static String sqlEliminarPelicula;
 
-    @SqlStatement(namespace = "pelicula", value = "existe")
-    private static String sqlExiste;
+    @SqlStatement(namespace = "pelicula", value = "existePelicula")
+    private static String sqlExistePelicula;
 
-    @SqlStatement(namespace = "pelicula", value = "existeExcluyendoId")
-    private static String sqlExisteExcluyendoId;
-
+    @SqlStatement(namespace = "pelicula", value = "existeExcluyendoIdPelicula")
+    private static String sqlExisteExcluyendoIdPelicula;
 
     public RepositorioPeliculaMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
         this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;
@@ -34,12 +33,12 @@ public class RepositorioPeliculaMysql implements RepositorioPelicula {
 
     @Override
     public Long crear(Pelicula pelicula) {
-        return customNamedParameterJdbcTemplate.crear(pelicula, sqlCrear);
+        return customNamedParameterJdbcTemplate.crear(pelicula, sqlCrearPelicula);
     }
 
     @Override
     public void actualizar(Pelicula pelicula) {
-        this.customNamedParameterJdbcTemplate.actualizar(pelicula, sqlActualizar);
+        this.customNamedParameterJdbcTemplate.actualizar(pelicula, sqlActualizarPelicula);
     }
 
     @Override
@@ -47,7 +46,7 @@ public class RepositorioPeliculaMysql implements RepositorioPelicula {
         MapSqlParameterSource parameterSource = new MapSqlParameterSource();
         parameterSource.addValue("id", id);
 
-        this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().update(sqlEliminar, parameterSource);
+        this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().update(sqlEliminarPelicula, parameterSource);
     }
 
     @Override
@@ -55,7 +54,7 @@ public class RepositorioPeliculaMysql implements RepositorioPelicula {
         MapSqlParameterSource parameterSource = new MapSqlParameterSource();
         parameterSource.addValue("titulo", titulo);
 
-        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExiste, parameterSource, Boolean.class);
+        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExistePelicula, parameterSource, Boolean.class);
     }
 
     @Override
@@ -64,6 +63,6 @@ public class RepositorioPeliculaMysql implements RepositorioPelicula {
         parameterSource.addValue("id", id);
         parameterSource.addValue("titulo", titulo);
 
-        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExisteExcluyendoId, parameterSource, boolean.class);
+        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExisteExcluyendoIdPelicula, parameterSource, boolean.class);
     }
 }
