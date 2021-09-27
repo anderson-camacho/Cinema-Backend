@@ -17,7 +17,7 @@ public class HorarioTestDataBuilder {
     }
 
     public HorarioTestDataBuilder conIdPelicula(){
-        this.idPelicula = 1L;
+        this.idPelicula = 44L;
         return this;
     }
 
