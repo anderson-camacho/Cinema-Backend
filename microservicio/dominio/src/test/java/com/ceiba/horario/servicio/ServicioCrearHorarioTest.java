@@ -13,7 +13,7 @@ public class ServicioCrearHorarioTest {
     private static final String EL_HORARIO_YA_EXISTE_EN_EL_SISTEMA = "El horario ya existe en el sistema";
 
     @Test
-    public void validarPeliculaExistenciaPreviaTest() {
+    public void validarHorarioExistenciaPreviaTest() {
         // arrange
         Horario horario = new HorarioTestDataBuilder().build();
         RepositorioHorario repositorioHorario = Mockito.mock(RepositorioHorario.class);
@@ -24,7 +24,7 @@ public class ServicioCrearHorarioTest {
     }
 
     @Test
-    public void validarPeliculaNoExistenciaPreviaTest() {
+    public void validarHorarioNoExistenciaPreviaTest() {
         // arrange
         Horario horario = new HorarioTestDataBuilder().conIdPelicula().build();
         RepositorioHorario repositorioHorario = Mockito.mock(RepositorioHorario.class);

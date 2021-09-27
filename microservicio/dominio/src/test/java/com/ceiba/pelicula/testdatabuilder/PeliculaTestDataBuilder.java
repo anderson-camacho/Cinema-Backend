@@ -19,6 +19,11 @@ public class PeliculaTestDataBuilder {
         return this;
     }
 
+    public PeliculaTestDataBuilder conTitulo() {
+        this.titulo = "Hackers";
+        return this;
+    }
+
     public PeliculaTestDataBuilder sinTitulo() {
         this.titulo = null;
         return this;
