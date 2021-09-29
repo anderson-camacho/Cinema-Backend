@@ -1,7 +1,7 @@
 create table usuario (
  id int(11) not null auto_increment,
  nombre varchar(100) not null,
- fecha_creacion datetime null,
+ fecha_creacion DATE not null,
  primary key (id)
 );
 

@@ -1,4 +1,4 @@
 update usuario
 set nombre = :nombre,
-	fecha_creacion = :fechaCreacion
+	fecha_creacion = :fecha_creacion
 where id = :id
