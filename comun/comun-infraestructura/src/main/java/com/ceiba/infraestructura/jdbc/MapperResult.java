@@ -4,7 +4,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 public interface MapperResult {
 
@@ -17,11 +16,11 @@ public interface MapperResult {
         return resultado;
     } 
 	
-	default LocalDateTime extraerLocalDateTime(ResultSet resultSet, String label) throws SQLException {
+	default LocalDate extraerLocalDateTime(ResultSet resultSet, String label) throws SQLException {
         Timestamp fecha = resultSet.getTimestamp(label);
-        LocalDateTime resultado = null;
+        LocalDate resultado = null;
         if (!resultSet.wasNull()) {
-            resultado = fecha.toLocalDateTime();
+            resultado = fecha.toLocalDateTime().toLocalDate();
         }
         return resultado;
     } 

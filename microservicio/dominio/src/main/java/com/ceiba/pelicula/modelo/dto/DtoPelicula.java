@@ -8,5 +8,5 @@ import lombok.Getter;
 public class DtoPelicula {
     private Long id;
     private String titulo;
-    private String Director;
+    private String director;
 }

@@ -3,7 +3,7 @@ package com.ceiba.usuario.modelo.entidad;
 
 import lombok.Getter;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;
 
@@ -19,9 +19,9 @@ public class Usuario {
 
     private Long id;
     private String nombre;
-    private LocalDateTime fechaCreacion;
+    private LocalDate fechaCreacion;
 
-    public Usuario(Long id,String nombre,LocalDateTime fechaCreacion) {
+    public Usuario(Long id,String nombre,LocalDate fechaCreacion) {
         validarObligatorio(nombre, SE_DEBE_INGRESAR_EL_NOMBRE_DE_USUARIO);
         validarObligatorio(fechaCreacion, SE_DEBE_INGRESAR_LA_FECHA_CREACION);
 
