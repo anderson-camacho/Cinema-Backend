@@ -18,7 +18,7 @@ public class ServicioCrearPeliculaTest {
         // arrange
         Pelicula pelicula = new PeliculaTestDataBuilder().build();
         RepositorioPelicula repositorioPelicula = Mockito.mock(RepositorioPelicula.class);
-        Mockito.when(repositorioPelicula.existe(Mockito.anyString())).thenReturn(true);
+        Mockito.when(repositorioPelicula.existe(Mockito.anyLong())).thenReturn(true);
         ServicioCrearPelicula servicioCrearPelicula = new ServicioCrearPelicula(repositorioPelicula);
         // act - assert
         BasePrueba.assertThrows(() -> servicioCrearPelicula.ejecutar(pelicula), ExcepcionDuplicidad.class,LA_PELICULA_YA_EXISTE_EN_EL_SISTEMA);
@@ -29,7 +29,7 @@ public class ServicioCrearPeliculaTest {
         // arrange
         Pelicula pelicula = new PeliculaTestDataBuilder().conId(20L).conTitulo().build();
         RepositorioPelicula repositorioPelicula = Mockito.mock(RepositorioPelicula.class);
-        Mockito.when(repositorioPelicula.existe(Mockito.anyString())).thenReturn(false);
+        Mockito.when(repositorioPelicula.existe(Mockito.anyLong())).thenReturn(false);
         ServicioCrearPelicula servicioCrearPelicula = new ServicioCrearPelicula(repositorioPelicula);
         // act - assert
         Assert.assertNotNull(servicioCrearPelicula.ejecutar(pelicula));

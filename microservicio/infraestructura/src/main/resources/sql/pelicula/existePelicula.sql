@@ -1,1 +1,1 @@
-select count(1) from pelicula where titulo = :titulo
+select count(1) from pelicula where id = :id

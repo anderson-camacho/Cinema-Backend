@@ -20,7 +20,7 @@ public class ServicioCrearPelicula {
     }
 
     private void validarExistenciaPrevia(Pelicula pelicula) {
-        boolean existe = this.repositorioPelicula.existe(pelicula.getTitulo());
+        boolean existe = this.repositorioPelicula.existe(pelicula.getId());
         if(existe) {
             throw new ExcepcionDuplicidad(LA_PELICULA_YA_EXISTE_EN_EL_SISTEMA);
         }

@@ -42,8 +42,9 @@ public class RepositorioUsuarioMysql implements RepositorioUsuario {
     }
 
     @Override
-    public boolean existe(String nombre) {
-        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExisteUsuario, construccionParamSource(nombre), Boolean.class);
+    public boolean existe(Long id) {
+        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate()
+                .queryForObject(sqlExisteUsuario, construccionParamSource(id), Boolean.class);
     }
 
     @Override

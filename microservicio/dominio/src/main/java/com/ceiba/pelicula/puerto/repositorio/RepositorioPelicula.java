@@ -26,11 +26,11 @@ public interface RepositorioPelicula {
 
     /**
      * Permite validar si existe una pelicula con un nombre
-     * @param titulo
+     * @param id
      * @return si existe o no
      */
 
-    boolean existe(String titulo);
+    boolean existe(Long id);
 
     /**
      * Permite validar si existe una pelicula con un nombre excluyendo un id
