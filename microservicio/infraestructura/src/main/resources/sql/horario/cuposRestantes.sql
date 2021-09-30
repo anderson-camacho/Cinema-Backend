@@ -1,1 +1,1 @@
-select count(1) from horario where id = :id and cupos > 0
+SELECT cupos FROM HORARIO where id = 1
