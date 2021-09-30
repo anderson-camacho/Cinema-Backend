@@ -63,12 +63,6 @@ public class RepositorioUsuarioMysql implements RepositorioUsuario {
         return paramSource;
     }
 
-    private MapSqlParameterSource construccionParamSource(String nombre) {
-        MapSqlParameterSource paramSource = new MapSqlParameterSource();
-        paramSource.addValue("nombre", nombre);
-        return paramSource;
-    }
-
     private MapSqlParameterSource construccionParamSource(Long id, String nombre) {
         MapSqlParameterSource paramSource = new MapSqlParameterSource();
         paramSource.addValue("id", id);
