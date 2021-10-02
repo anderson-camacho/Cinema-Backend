@@ -9,7 +9,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
+@CrossOrigin(origins = {"http://localhost:4200"})
 @RestController
 @RequestMapping("/peliculas")
 @Api(tags = {"Controlador comando pelicula"})
@@ -30,6 +30,10 @@ public class ComandoControladorPelicula {
     @PostMapping
     @ApiOperation("Crear pelicula")
     public ComandoRespuesta<Long> crear(@RequestBody ComandoPelicula comandoPelicula) {
+        System.out.println("Prueba de recepcion  de datos "
+                + comandoPelicula.getDirector()
+                +" "
+                +comandoPelicula.getTitulo());
         return manejadorCrearPelicula.ejecutar(comandoPelicula);
     }
 

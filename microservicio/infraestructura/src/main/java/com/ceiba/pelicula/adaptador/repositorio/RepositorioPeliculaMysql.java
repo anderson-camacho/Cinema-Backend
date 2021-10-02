@@ -66,4 +66,5 @@ public class RepositorioPeliculaMysql implements RepositorioPelicula {
 
         return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExisteExcluyendoIdPelicula, parameterSource, boolean.class);
     }
+
 }

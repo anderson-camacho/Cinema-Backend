@@ -11,4 +11,6 @@ public interface DaoPelicula {
      * @return los usuarios
      */
     List<DtoPelicula> listar();
+
+    DtoPelicula consultarId(Long id);
 }

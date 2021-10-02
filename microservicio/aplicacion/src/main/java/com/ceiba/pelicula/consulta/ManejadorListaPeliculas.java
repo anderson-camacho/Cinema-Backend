@@ -17,4 +17,5 @@ public class ManejadorListaPeliculas {
     public List<DtoPelicula> ejecutar() {
         return this.daoPelicula.listar();
     }
+    public DtoPelicula ejecutar(Long id){return this.daoPelicula.consultarId(id);}
 }
