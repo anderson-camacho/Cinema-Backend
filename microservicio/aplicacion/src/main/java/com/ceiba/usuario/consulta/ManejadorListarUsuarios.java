@@ -1,5 +1,6 @@
 package com.ceiba.usuario.consulta;
 
+import com.ceiba.pelicula.modelo.dto.DtoPelicula;
 import com.ceiba.usuario.modelo.dto.DtoUsuario;
 import com.ceiba.usuario.puerto.dao.DaoUsuario;
 import org.springframework.stereotype.Component;
@@ -16,6 +17,7 @@ public class ManejadorListarUsuarios {
     }
 
     public List<DtoUsuario> ejecutar() {
-        return this.daoUsuario.listar();
+        return this.daoUsuario.listarUsuario();
     }
+    public DtoUsuario ejecutar(Long id){return this.daoUsuario.consultarUsuarioId(id);}
 }

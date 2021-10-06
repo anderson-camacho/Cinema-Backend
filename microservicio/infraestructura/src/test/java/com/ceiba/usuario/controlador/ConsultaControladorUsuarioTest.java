@@ -32,4 +32,14 @@ public class ConsultaControladorUsuarioTest {
                 .andExpect(jsonPath("$[0].nombre", IsNull.notNullValue()))
                 .andExpect(jsonPath("$[0].fechaCreacion", IsNull.notNullValue()));
     }
+
+    @Test
+    public void consultarEspecifico() throws Exception {
+        mocMvc.perform(get("/usuarios/1")
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id", IsNull.notNullValue()))
+                .andExpect(jsonPath("$.nombre", IsNull.notNullValue()))
+                .andExpect(jsonPath("$.fechaCreacion", IsNull.notNullValue()));
+    }
 }

@@ -1,7 +1,9 @@
 package com.ceiba.usuario.controlador;
 
+import com.ceiba.pelicula.modelo.dto.DtoPelicula;
 import com.ceiba.usuario.consulta.ManejadorListarUsuarios;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.ceiba.usuario.modelo.dto.DtoUsuario;
@@ -26,4 +28,9 @@ public class ConsultaControladorUsuario {
         return this.manejadorListarUsuarios.ejecutar();
     }
 
+    @GetMapping(value="/{id}")
+    @ApiOperation("Consultar Pelicula")
+    public DtoUsuario consultarUsuarioId(@PathVariable Long id){
+        return this.manejadorListarUsuarios.ejecutar(id);
+    }
 }
