@@ -1,3 +1,7 @@
+/**
+ * @author Anderson Camacho Palacios
+ * @Email anderson.camacho@ceiba.com.co
+ */
 package com.ceiba.pelicula.modelo.entidad;
 
 import lombok.Getter;
@@ -14,13 +18,6 @@ public class Pelicula {
     private String titulo;
     private String director;
 
-    /**
-     * Constructor general con validaciones de datos obligatorios
-     *
-     * @param id
-     * @param titulo
-     * @param director
-     */
     public Pelicula(Long id, String titulo, String director) {
 
         validarObligatorio(titulo, SE_DEBE_INGRESAR_EL_TITULO_DE_LA_PELICULA);

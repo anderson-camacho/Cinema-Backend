@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface DaoHorario {
     List<DtoHorario> listarHorariosConFechaSuperiorAHoy();
+    DtoHorario consultarHorarioId(Long id);
 }

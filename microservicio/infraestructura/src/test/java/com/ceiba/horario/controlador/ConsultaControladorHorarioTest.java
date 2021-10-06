@@ -33,4 +33,15 @@ public class ConsultaControladorHorarioTest {
                 .andExpect(jsonPath("$[0].fecha", IsNull.notNullValue()))
                 .andExpect(jsonPath("$[0].cupos", IsNull.notNullValue()));
     }
+
+    @Test
+    public void consultarHorarioId() throws Exception {
+        mockMvc.perform(get("/horarios/1")
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id", IsNull.notNullValue()))
+                .andExpect(jsonPath("$.idPelicula", IsNull.notNullValue()))
+                .andExpect(jsonPath("$.fecha", IsNull.notNullValue()))
+                .andExpect(jsonPath("$.cupos", IsNull.notNullValue()));
+    }
 }

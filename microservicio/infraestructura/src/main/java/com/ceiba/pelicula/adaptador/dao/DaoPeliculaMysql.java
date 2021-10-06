@@ -33,7 +33,7 @@ public class DaoPeliculaMysql implements DaoPelicula {
     }
 
     @Override
-    public DtoPelicula consultarId(Long id) {
+    public DtoPelicula consultarPeliculaId(Long id) {
         MapSqlParameterSource parameterSource = new MapSqlParameterSource();
         parameterSource.addValue("id", id);
 

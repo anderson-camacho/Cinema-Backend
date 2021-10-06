@@ -32,4 +32,14 @@ public class ConsultaControladorPeliculaTest {
                 .andExpect(jsonPath("$[0].titulo", IsNull.notNullValue()))
                 .andExpect(jsonPath("$[0].director", IsNull.notNullValue()));
     }
+
+    @Test
+    public void consultarEspecifico() throws Exception {
+        mockMvc.perform(get("/peliculas/1")
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id", IsNull.notNullValue()))
+                .andExpect(jsonPath("$.titulo", IsNull.notNullValue()))
+                .andExpect(jsonPath("$.director", IsNull.notNullValue()));
+    }
 }

@@ -1,3 +1,7 @@
+/**
+ * @author Anderson Camacho Palacios
+ * @Email anderson.camacho@ceiba.com.co
+ */
 package com.ceiba.pelicula.puerto.repositorio;
 
 import com.ceiba.pelicula.modelo.entidad.Pelicula;
@@ -6,6 +10,7 @@ import com.ceiba.pelicula.modelo.entidad.Pelicula;
 public interface RepositorioPelicula {
     /**
      * Permite crear una pelicula
+     *
      * @param pelicula
      * @return el id generado
      */
@@ -13,12 +18,14 @@ public interface RepositorioPelicula {
 
     /**
      * Permite actualizar una pelicula
+     *
      * @param pelicula
      */
     void actualizar(Pelicula pelicula);
 
     /**
      * Permite eliminar una pelicula
+     *
      * @param id
      */
     void eliminar(Long id);
@@ -26,6 +33,7 @@ public interface RepositorioPelicula {
 
     /**
      * Permite validar si existe una pelicula con un nombre
+     *
      * @param id
      * @return si existe o no
      */
@@ -34,10 +42,11 @@ public interface RepositorioPelicula {
 
     /**
      * Permite validar si existe una pelicula con un nombre excluyendo un id
+     *
      * @param titulo
      * @return si existe o no
      */
-    boolean existeExcluyendoId(Long id,String titulo);
+    boolean existeExcluyendoId(Long id, String titulo);
 
 
 }
