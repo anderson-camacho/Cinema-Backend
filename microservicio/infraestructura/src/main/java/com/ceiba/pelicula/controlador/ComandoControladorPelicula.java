@@ -9,6 +9,9 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.logging.Logger;
+
 @CrossOrigin(origins = {"http://localhost:4200"})
 @RestController
 @RequestMapping("/peliculas")
@@ -17,6 +20,8 @@ public class ComandoControladorPelicula {
     private final ManejadorCrearPelicula manejadorCrearPelicula;
     private final ManejadorEliminarPelicula manejadorEliminarPelicula;
     private final ManejadorActualizarPelicula manejadorActualizarPelicula;
+
+    static Logger log = Logger.getLogger(ComandoControladorPelicula.class.getName());
 
     @Autowired
     public ComandoControladorPelicula(ManejadorCrearPelicula manejadorCrearPelicula,
@@ -28,12 +33,8 @@ public class ComandoControladorPelicula {
     }
 
     @PostMapping
-    @ApiOperation("Crear pelicula")
+    @ApiOperation("Crear Pelicula")
     public ComandoRespuesta<Long> crear(@RequestBody ComandoPelicula comandoPelicula) {
-        System.out.println("Prueba de recepcion  de datos "
-                + comandoPelicula.getDirector()
-                +" "
-                +comandoPelicula.getTitulo());
         return manejadorCrearPelicula.ejecutar(comandoPelicula);
     }
 

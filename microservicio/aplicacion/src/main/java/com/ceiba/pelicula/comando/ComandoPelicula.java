@@ -12,5 +12,5 @@ import lombok.Setter;
 public class ComandoPelicula {
     private Long id;
     private String titulo;
-    private String Director;
+    private String director;
 }

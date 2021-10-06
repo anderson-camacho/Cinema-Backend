@@ -6,7 +6,6 @@ import java.util.Map;
 
 import com.ceiba.infraestructura.jdbc.CustomNamedParameterJdbcTemplate;
 import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
-import com.ceiba.pelicula.adaptador.dao.MapeoPelicula;
 import com.ceiba.usuario.puerto.dao.DaoUsuario;
 
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;

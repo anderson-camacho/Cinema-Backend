@@ -4,8 +4,6 @@ import com.ceiba.horario.modelo.dto.DtoHorario;
 import com.ceiba.horario.puerto.dao.DaoHorario;
 import com.ceiba.infraestructura.jdbc.CustomNamedParameterJdbcTemplate;
 import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
-import com.ceiba.pelicula.adaptador.dao.MapeoPelicula;
-import com.ceiba.pelicula.modelo.dto.DtoPelicula;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.stereotype.Component;
 

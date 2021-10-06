@@ -2,7 +2,6 @@ package com.ceiba.horario.consulta;
 
 import com.ceiba.horario.modelo.dto.DtoHorario;
 import com.ceiba.horario.puerto.dao.DaoHorario;
-import com.ceiba.pelicula.modelo.dto.DtoPelicula;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

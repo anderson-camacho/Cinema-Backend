@@ -31,4 +31,15 @@ public class ConsultaControladorReservaTest {
                 .andExpect(jsonPath("$[0].idUsuario", IsNull.notNullValue()))
                 .andExpect(jsonPath("$[0].idHorario", IsNull.notNullValue()));
     }
+
+    @Test
+    public void consultarReservaId() throws Exception {
+        mockMvc.perform(get("/reservas/1")
+                        .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.id", IsNull.notNullValue()))
+                .andExpect(jsonPath("$.idUsuario", IsNull.notNullValue()))
+                .andExpect(jsonPath("$.idHorario", IsNull.notNullValue()));
+    }
+
 }

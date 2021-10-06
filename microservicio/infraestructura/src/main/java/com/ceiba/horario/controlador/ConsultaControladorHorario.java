@@ -2,7 +2,6 @@ package com.ceiba.horario.controlador;
 
 import com.ceiba.horario.consulta.ManejadorListaHorarios;
 import com.ceiba.horario.modelo.dto.DtoHorario;
-import com.ceiba.pelicula.modelo.dto.DtoPelicula;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;

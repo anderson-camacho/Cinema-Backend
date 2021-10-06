@@ -16,6 +16,8 @@ public class ManejadorListaReserva {
     }
 
     public List<DtoReserva> ejecutar() {
-        return this.daoReserva.listar();
+        return this.daoReserva.listarReserva();
     }
+
+    public DtoReserva ejecutar(Long id){return this.daoReserva.consultarReservaId(id);}
 }
