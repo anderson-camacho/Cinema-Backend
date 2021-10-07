@@ -21,8 +21,6 @@ public class ComandoControladorPelicula {
     private final ManejadorEliminarPelicula manejadorEliminarPelicula;
     private final ManejadorActualizarPelicula manejadorActualizarPelicula;
 
-    static Logger log = Logger.getLogger(ComandoControladorPelicula.class.getName());
-
     @Autowired
     public ComandoControladorPelicula(ManejadorCrearPelicula manejadorCrearPelicula,
                                      ManejadorEliminarPelicula manejadorEliminarPelicula,
