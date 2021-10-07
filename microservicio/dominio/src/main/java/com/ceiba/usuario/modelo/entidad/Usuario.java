@@ -23,7 +23,6 @@ public class Usuario {
 
     public Usuario(Long id,String nombre,LocalDate fechaCreacion) {
         validarObligatorio(nombre, SE_DEBE_INGRESAR_EL_NOMBRE_DE_USUARIO);
-        validarObligatorio(fechaCreacion, SE_DEBE_INGRESAR_LA_FECHA_CREACION);
 
         this.id = id;
         this.nombre = nombre;
