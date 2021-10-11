@@ -1,13 +1,13 @@
 package com.ceiba.usuario.servicio;
 
-import com.ceiba.dominio.excepcion.ExcepcionDuplicidad;
+import com.ceiba.dominio.excepcion.ExcepcionUsuarioNoExiste;
 import com.ceiba.usuario.modelo.entidad.Usuario;
 import com.ceiba.usuario.puerto.repositorio.RepositorioUsuario;
 
 
 public class ServicioActualizarUsuario {
 
-    private static final String EL_USUARIO_YA_EXISTE_EN_EL_SISTEMA = "El usuario ya existe en el sistema";
+    private static final String EL_USUARIO_NO_EXISTE_EN_EL_SISTEMA = "El usuario no existe en el sistema";
 
     private final RepositorioUsuario repositorioUsuario;
 
@@ -21,9 +21,9 @@ public class ServicioActualizarUsuario {
     }
 
     private void validarExistenciaPrevia(Usuario usuario) {
-        boolean existe = this.repositorioUsuario.existeExcluyendoId(usuario.getId(),usuario.getNombre());
-        if(existe) {
-            throw new ExcepcionDuplicidad(EL_USUARIO_YA_EXISTE_EN_EL_SISTEMA);
+        boolean existe = this.repositorioUsuario.existe(usuario.getId());
+        if(!existe) {
+            throw new ExcepcionUsuarioNoExiste(EL_USUARIO_NO_EXISTE_EN_EL_SISTEMA);
         }
     }
 }
