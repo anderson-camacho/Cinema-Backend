@@ -27,11 +27,11 @@ insert into pelicula(titulo, director) values('Rapido y Furioso 3','No se quien'
 ----------------------------------------------------------------------------------------
 
 --Tabla Horario
-insert into horario(idPelicula, fecha, cupos) values(1, '2021-10-10', 60);--1
-insert into horario(idPelicula, fecha, cupos) values(3, '2021-10-10', 50);--2
-insert into horario(idPelicula, fecha, cupos) values(2, '2021-10-10', 80);--3
-insert into horario(idPelicula, fecha, cupos) values(4, '2021-10-10', 60);--4
-insert into horario(idPelicula, fecha, cupos) values(5, '2021-10-10', 50);--5
+insert into horario(idPelicula, fecha, cupos) values(1, now(), 60);--1
+insert into horario(idPelicula, fecha, cupos) values(3, now(), 50);--2
+insert into horario(idPelicula, fecha, cupos) values(2, now(), 80);--3
+insert into horario(idPelicula, fecha, cupos) values(4, now(), 60);--4
+insert into horario(idPelicula, fecha, cupos) values(5, now(), 50);--5
 insert into horario(idPelicula, fecha, cupos) values(1, '2021-09-24', 80);--6
 --Datos para eliminar:: no usar para otra cosa
 ----------------------------------------------------------------------------------------

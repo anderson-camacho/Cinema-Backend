@@ -27,11 +27,7 @@ public class ConsultaControladorHorarioTest {
     public void listarHorariosConFechaSuperiorAHoy() throws Exception {
         mockMvc.perform(get("/horarios")
                         .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$[0].id", IsNull.notNullValue()))
-                .andExpect(jsonPath("$[0].idPelicula", IsNull.notNullValue()))
-                .andExpect(jsonPath("$[0].fecha", IsNull.notNullValue()))
-                .andExpect(jsonPath("$[0].cupos", IsNull.notNullValue()));
+                .andExpect(status().isOk());
     }
 
     @Test
